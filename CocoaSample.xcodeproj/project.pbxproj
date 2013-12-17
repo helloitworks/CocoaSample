@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2281C456186020FA009982C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281C455186020FA009982C9 /* Cocoa.framework */; };
-		2281C460186020FA009982C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2281C45E186020FA009982C9 /* InfoPlist.strings */; };
-		2281C462186020FA009982C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C461186020FA009982C9 /* main.m */; };
-		2281C466186020FA009982C9 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2281C464186020FA009982C9 /* Credits.rtf */; };
-		2281C469186020FA009982C9 /* SYXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C468186020FA009982C9 /* SYXAppDelegate.m */; };
 		2281C46C186020FA009982C9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2281C46A186020FA009982C9 /* MainMenu.xib */; };
-		2281C46E186020FA009982C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2281C46D186020FA009982C9 /* Images.xcassets */; };
 		2281C48F18602424009982C9 /* SYXTextLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C48E18602424009982C9 /* SYXTextLink.m */; };
+		2281C498186042C2009982C9 /* SYXThreePartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C496186042C2009982C9 /* SYXThreePartButton.m */; };
+		2281C49E18604496009982C9 /* SYXCommonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C49D18604496009982C9 /* SYXCommonUI.m */; };
+		2281C4C318606686009982C9 /* SYXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C4C018606686009982C9 /* SYXAppDelegate.m */; };
+		2281C4C7186066EF009982C9 /* CocoaSample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4C4186066EF009982C9 /* CocoaSample-Info.plist */; };
+		2281C4C8186066EF009982C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C4C6186066EF009982C9 /* main.m */; };
+		2281C4D41860670D009982C9 /* DownloadMgrOpenF.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4CB1860670D009982C9 /* DownloadMgrOpenF.png */; };
+		2281C4D51860670D009982C9 /* DownloadMgrOpenHLF.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4CC1860670D009982C9 /* DownloadMgrOpenHLF.png */; };
+		2281C4D61860670D009982C9 /* DownloadMgrOpenHLL.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4CD1860670D009982C9 /* DownloadMgrOpenHLL.png */; };
+		2281C4D71860670D009982C9 /* DownloadMgrOpenHLR.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4CE1860670D009982C9 /* DownloadMgrOpenHLR.png */; };
+		2281C4D81860670D009982C9 /* DownloadMgrOpenL.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4CF1860670D009982C9 /* DownloadMgrOpenL.png */; };
+		2281C4D91860670D009982C9 /* DownloadMgrOpenPressF.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4D01860670D009982C9 /* DownloadMgrOpenPressF.png */; };
+		2281C4DA1860670D009982C9 /* DownloadMgrOpenPressL.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4D11860670D009982C9 /* DownloadMgrOpenPressL.png */; };
+		2281C4DB1860670D009982C9 /* DownloadMgrOpenPressR.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4D21860670D009982C9 /* DownloadMgrOpenPressR.png */; };
+		2281C4DC1860670D009982C9 /* DownloadMgrOpenR.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4D31860670D009982C9 /* DownloadMgrOpenR.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,19 +32,29 @@
 		2281C458186020FA009982C9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2281C459186020FA009982C9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2281C45A186020FA009982C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2281C45D186020FA009982C9 /* CocoaSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaSample-Info.plist"; sourceTree = "<group>"; };
-		2281C45F186020FA009982C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2281C461186020FA009982C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2281C463186020FA009982C9 /* CocoaSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaSample-Prefix.pch"; sourceTree = "<group>"; };
-		2281C465186020FA009982C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		2281C467186020FA009982C9 /* SYXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYXAppDelegate.h; sourceTree = "<group>"; };
-		2281C468186020FA009982C9 /* SYXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYXAppDelegate.m; sourceTree = "<group>"; };
 		2281C46B186020FA009982C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		2281C46D186020FA009982C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2281C474186020FA009982C9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2281C48D18602424009982C9 /* SYXTextLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXTextLink.h; sourceTree = "<group>"; };
 		2281C48E18602424009982C9 /* SYXTextLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXTextLink.m; sourceTree = "<group>"; };
 		2281C49018602871009982C9 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
+		2281C495186042C2009982C9 /* SYXThreePartButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXThreePartButton.h; sourceTree = "<group>"; };
+		2281C496186042C2009982C9 /* SYXThreePartButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXThreePartButton.m; sourceTree = "<group>"; };
+		2281C49C18604496009982C9 /* SYXCommonUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXCommonUI.h; sourceTree = "<group>"; };
+		2281C49D18604496009982C9 /* SYXCommonUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXCommonUI.m; sourceTree = "<group>"; };
+		2281C4BF18606686009982C9 /* SYXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXAppDelegate.h; sourceTree = "<group>"; };
+		2281C4C018606686009982C9 /* SYXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXAppDelegate.m; sourceTree = "<group>"; };
+		2281C4C4186066EF009982C9 /* CocoaSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CocoaSample-Info.plist"; path = "CocoaSample/CocoaSample-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2281C4C5186066EF009982C9 /* CocoaSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CocoaSample-Prefix.pch"; path = "CocoaSample/CocoaSample-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		2281C4C6186066EF009982C9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CocoaSample/main.m; sourceTree = SOURCE_ROOT; };
+		2281C4CB1860670D009982C9 /* DownloadMgrOpenF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenF.png; sourceTree = "<group>"; };
+		2281C4CC1860670D009982C9 /* DownloadMgrOpenHLF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenHLF.png; sourceTree = "<group>"; };
+		2281C4CD1860670D009982C9 /* DownloadMgrOpenHLL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenHLL.png; sourceTree = "<group>"; };
+		2281C4CE1860670D009982C9 /* DownloadMgrOpenHLR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenHLR.png; sourceTree = "<group>"; };
+		2281C4CF1860670D009982C9 /* DownloadMgrOpenL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenL.png; sourceTree = "<group>"; };
+		2281C4D01860670D009982C9 /* DownloadMgrOpenPressF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenPressF.png; sourceTree = "<group>"; };
+		2281C4D11860670D009982C9 /* DownloadMgrOpenPressL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenPressL.png; sourceTree = "<group>"; };
+		2281C4D21860670D009982C9 /* DownloadMgrOpenPressR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenPressR.png; sourceTree = "<group>"; };
+		2281C4D31860670D009982C9 /* DownloadMgrOpenR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenR.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,25 +110,11 @@
 		2281C45B186020FA009982C9 /* CocoaSample */ = {
 			isa = PBXGroup;
 			children = (
-				2281C467186020FA009982C9 /* SYXAppDelegate.h */,
-				2281C468186020FA009982C9 /* SYXAppDelegate.m */,
+				2281C4BA18606686009982C9 /* Source */,
+				2281C49918604363009982C9 /* Resources */,
 				2281C46A186020FA009982C9 /* MainMenu.xib */,
-				2281C46D186020FA009982C9 /* Images.xcassets */,
-				2281C45C186020FA009982C9 /* Supporting Files */,
 			);
 			path = CocoaSample;
-			sourceTree = "<group>";
-		};
-		2281C45C186020FA009982C9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2281C45D186020FA009982C9 /* CocoaSample-Info.plist */,
-				2281C45E186020FA009982C9 /* InfoPlist.strings */,
-				2281C461186020FA009982C9 /* main.m */,
-				2281C463186020FA009982C9 /* CocoaSample-Prefix.pch */,
-				2281C464186020FA009982C9 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		2281C48918602424009982C9 /* Common */ = {
@@ -131,8 +136,11 @@
 		2281C48B18602424009982C9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2281C49218604289009982C9 /* Button */,
 				2281C48C18602424009982C9 /* Link */,
 				2281C49018602871009982C9 /* UI.h */,
+				2281C49C18604496009982C9 /* SYXCommonUI.h */,
+				2281C49D18604496009982C9 /* SYXCommonUI.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -144,6 +152,67 @@
 				2281C48E18602424009982C9 /* SYXTextLink.m */,
 			);
 			path = Link;
+			sourceTree = "<group>";
+		};
+		2281C49218604289009982C9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				2281C495186042C2009982C9 /* SYXThreePartButton.h */,
+				2281C496186042C2009982C9 /* SYXThreePartButton.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		2281C49918604363009982C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2281C4C91860670D009982C9 /* Image Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2281C4BA18606686009982C9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2281C4BF18606686009982C9 /* SYXAppDelegate.h */,
+				2281C4C018606686009982C9 /* SYXAppDelegate.m */,
+				2281C4BB18606686009982C9 /* Supporting Files */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		2281C4BB18606686009982C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2281C4C4186066EF009982C9 /* CocoaSample-Info.plist */,
+				2281C4C5186066EF009982C9 /* CocoaSample-Prefix.pch */,
+				2281C4C6186066EF009982C9 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2281C4C91860670D009982C9 /* Image Files */ = {
+			isa = PBXGroup;
+			children = (
+				2281C4CA1860670D009982C9 /* Button */,
+			);
+			path = "Image Files";
+			sourceTree = "<group>";
+		};
+		2281C4CA1860670D009982C9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				2281C4CB1860670D009982C9 /* DownloadMgrOpenF.png */,
+				2281C4CC1860670D009982C9 /* DownloadMgrOpenHLF.png */,
+				2281C4CD1860670D009982C9 /* DownloadMgrOpenHLL.png */,
+				2281C4CE1860670D009982C9 /* DownloadMgrOpenHLR.png */,
+				2281C4CF1860670D009982C9 /* DownloadMgrOpenL.png */,
+				2281C4D01860670D009982C9 /* DownloadMgrOpenPressF.png */,
+				2281C4D11860670D009982C9 /* DownloadMgrOpenPressL.png */,
+				2281C4D21860670D009982C9 /* DownloadMgrOpenPressR.png */,
+				2281C4D31860670D009982C9 /* DownloadMgrOpenR.png */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,10 +267,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2281C460186020FA009982C9 /* InfoPlist.strings in Resources */,
-				2281C46E186020FA009982C9 /* Images.xcassets in Resources */,
-				2281C466186020FA009982C9 /* Credits.rtf in Resources */,
+				2281C4D81860670D009982C9 /* DownloadMgrOpenL.png in Resources */,
 				2281C46C186020FA009982C9 /* MainMenu.xib in Resources */,
+				2281C4D41860670D009982C9 /* DownloadMgrOpenF.png in Resources */,
+				2281C4C7186066EF009982C9 /* CocoaSample-Info.plist in Resources */,
+				2281C4D61860670D009982C9 /* DownloadMgrOpenHLL.png in Resources */,
+				2281C4D51860670D009982C9 /* DownloadMgrOpenHLF.png in Resources */,
+				2281C4DA1860670D009982C9 /* DownloadMgrOpenPressL.png in Resources */,
+				2281C4D71860670D009982C9 /* DownloadMgrOpenHLR.png in Resources */,
+				2281C4D91860670D009982C9 /* DownloadMgrOpenPressF.png in Resources */,
+				2281C4DB1860670D009982C9 /* DownloadMgrOpenPressR.png in Resources */,
+				2281C4DC1860670D009982C9 /* DownloadMgrOpenR.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2281C462186020FA009982C9 /* main.m in Sources */,
-				2281C469186020FA009982C9 /* SYXAppDelegate.m in Sources */,
+				2281C4C8186066EF009982C9 /* main.m in Sources */,
+				2281C498186042C2009982C9 /* SYXThreePartButton.m in Sources */,
+				2281C49E18604496009982C9 /* SYXCommonUI.m in Sources */,
+				2281C4C318606686009982C9 /* SYXAppDelegate.m in Sources */,
 				2281C48F18602424009982C9 /* SYXTextLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,22 +299,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2281C45E186020FA009982C9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2281C45F186020FA009982C9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2281C464186020FA009982C9 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2281C465186020FA009982C9 /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
 		2281C46A186020FA009982C9 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

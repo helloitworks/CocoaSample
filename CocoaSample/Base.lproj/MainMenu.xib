@@ -660,12 +660,21 @@
                         <rect key="frame" x="170" y="15" width="156" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     </customView>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xz2-Rk-8vE" customClass="SYXThreePartButton">
+                        <rect key="frame" x="183" y="236" width="61" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UaR-gH-hWB">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
         </window>
         <customObject id="494" customClass="SYXAppDelegate">
             <connections>
                 <outlet property="textLink" destination="zNq-ak-lOq" id="EjP-UT-ak0"/>
+                <outlet property="threePartButton" destination="xz2-Rk-8vE" id="R5a-cA-R2D"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
