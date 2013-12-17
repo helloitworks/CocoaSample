@@ -2,7 +2,7 @@
 //  SYXAppDelegate.m
 //  CocoaSample
 //
-//  Created by shenyixin on 13-12-17.
+//  Created by Shen Yixin on 13-12-17.
 //
 //
 
@@ -11,13 +11,15 @@
 @implementation SYXAppDelegate
 @synthesize textLink = _textLink;
 
+NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
 }
 - (void)awakeFromNib
 {
-    self.textLink.title = @"http://www.helloitworks.com";
+    self.textLink.title = SYXTextLinkUrl;
     self.textLink.target = self;
     self.textLink.selector = @selector(onTextLink:);
     
@@ -26,7 +28,7 @@
 
 - (IBAction)onTextLink:(id)sender
 {
-    NSString* strUrl = @"http://www.helloitworks.com";
+    NSString* strUrl = SYXTextLinkUrl;
     NSURL *url = [[[NSURL alloc] initWithString:strUrl] autorelease];
     [[NSWorkspace sharedWorkspace] openURL:url];
     

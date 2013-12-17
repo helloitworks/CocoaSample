@@ -2,7 +2,7 @@
 //  main.m
 //  CocoaSample
 //
-//  Created by shenyixin on 13-12-17.
+//  Created by Shen Yixin on 13-12-17.
 //
 //
 
