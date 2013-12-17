@@ -35,6 +35,7 @@
 		2281C474186020FA009982C9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2281C48D18602424009982C9 /* SYXTextLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXTextLink.h; sourceTree = "<group>"; };
 		2281C48E18602424009982C9 /* SYXTextLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXTextLink.m; sourceTree = "<group>"; };
+		2281C49018602871009982C9 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2281C48C18602424009982C9 /* Link */,
+				2281C49018602871009982C9 /* UI.h */,
 			);
 			path = UI;
 			sourceTree = "<group>";
