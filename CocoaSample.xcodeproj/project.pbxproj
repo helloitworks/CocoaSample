@@ -14,19 +14,8 @@
 		2281C469186020FA009982C9 /* SYXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C468186020FA009982C9 /* SYXAppDelegate.m */; };
 		2281C46C186020FA009982C9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2281C46A186020FA009982C9 /* MainMenu.xib */; };
 		2281C46E186020FA009982C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2281C46D186020FA009982C9 /* Images.xcassets */; };
-		2281C475186020FA009982C9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281C474186020FA009982C9 /* XCTest.framework */; };
-		2281C476186020FA009982C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281C455186020FA009982C9 /* Cocoa.framework */; };
+		2281C48F18602424009982C9 /* SYXTextLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C48E18602424009982C9 /* SYXTextLink.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2281C477186020FA009982C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2281C44A186020FA009982C9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2281C451186020FA009982C9;
-			remoteInfo = CocoaSample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2281C452186020FA009982C9 /* CocoaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,8 +32,9 @@
 		2281C468186020FA009982C9 /* SYXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYXAppDelegate.m; sourceTree = "<group>"; };
 		2281C46B186020FA009982C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2281C46D186020FA009982C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2281C473186020FA009982C9 /* CocoaSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2281C474186020FA009982C9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2281C48D18602424009982C9 /* SYXTextLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXTextLink.h; sourceTree = "<group>"; };
+		2281C48E18602424009982C9 /* SYXTextLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXTextLink.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,21 +46,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2281C470186020FA009982C9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2281C476186020FA009982C9 /* Cocoa.framework in Frameworks */,
-				2281C475186020FA009982C9 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2281C449186020FA009982C9 = {
 			isa = PBXGroup;
 			children = (
+				2281C48918602424009982C9 /* Common */,
 				2281C45B186020FA009982C9 /* CocoaSample */,
 				2281C454186020FA009982C9 /* Frameworks */,
 				2281C453186020FA009982C9 /* Products */,
@@ -81,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				2281C452186020FA009982C9 /* CocoaSample.app */,
-				2281C473186020FA009982C9 /* CocoaSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +111,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2281C48918602424009982C9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2281C48A18602424009982C9 /* Core */,
+				2281C48B18602424009982C9 /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2281C48A18602424009982C9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2281C48B18602424009982C9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2281C48C18602424009982C9 /* Link */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2281C48C18602424009982C9 /* Link */ = {
+			isa = PBXGroup;
+			children = (
+				2281C48D18602424009982C9 /* SYXTextLink.h */,
+				2281C48E18602424009982C9 /* SYXTextLink.m */,
+			);
+			path = Link;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,24 +164,6 @@
 			productReference = 2281C452186020FA009982C9 /* CocoaSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2281C472186020FA009982C9 /* CocoaSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2281C486186020FA009982C9 /* Build configuration list for PBXNativeTarget "CocoaSampleTests" */;
-			buildPhases = (
-				2281C46F186020FA009982C9 /* Sources */,
-				2281C470186020FA009982C9 /* Frameworks */,
-				2281C471186020FA009982C9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2281C478186020FA009982C9 /* PBXTargetDependency */,
-			);
-			name = CocoaSampleTests;
-			productName = CocoaSampleTests;
-			productReference = 2281C473186020FA009982C9 /* CocoaSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,11 +172,6 @@
 			attributes = {
 				CLASSPREFIX = SYX;
 				LastUpgradeCheck = 0500;
-				TargetAttributes = {
-					2281C472186020FA009982C9 = {
-						TestTargetID = 2281C451186020FA009982C9;
-					};
-				};
 			};
 			buildConfigurationList = 2281C44D186020FA009982C9 /* Build configuration list for PBXProject "CocoaSample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -196,7 +187,6 @@
 			projectRoot = "";
 			targets = (
 				2281C451186020FA009982C9 /* CocoaSample */,
-				2281C472186020FA009982C9 /* CocoaSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -213,13 +203,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2281C471186020FA009982C9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -229,25 +212,11 @@
 			files = (
 				2281C462186020FA009982C9 /* main.m in Sources */,
 				2281C469186020FA009982C9 /* SYXAppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2281C46F186020FA009982C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2281C48F18602424009982C9 /* SYXTextLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2281C478186020FA009982C9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2281C451186020FA009982C9 /* CocoaSample */;
-			targetProxy = 2281C477186020FA009982C9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2281C45E186020FA009982C9 /* InfoPlist.strings */ = {
@@ -373,46 +342,6 @@
 			};
 			name = Release;
 		};
-		2281C487186020FA009982C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaSample.app/Contents/MacOS/CocoaSample";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CocoaSample/CocoaSample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "CocoaSampleTests/CocoaSampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		2281C488186020FA009982C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaSample.app/Contents/MacOS/CocoaSample";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CocoaSample/CocoaSample-Prefix.pch";
-				INFOPLIST_FILE = "CocoaSampleTests/CocoaSampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -430,14 +359,6 @@
 			buildConfigurations = (
 				2281C484186020FA009982C9 /* Debug */,
 				2281C485186020FA009982C9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		2281C486186020FA009982C9 /* Build configuration list for PBXNativeTarget "CocoaSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2281C487186020FA009982C9 /* Debug */,
-				2281C488186020FA009982C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
