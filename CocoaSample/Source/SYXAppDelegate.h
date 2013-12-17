@@ -2,7 +2,7 @@
 //  SYXAppDelegate.h
 //  CocoaSample
 //
-//  Created by Shen Yixin on 13-12-17.
+//   by Shen Yixin on 13-12-17.
 //
 //
 

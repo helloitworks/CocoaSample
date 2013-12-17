@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2281C456186020FA009982C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281C455186020FA009982C9 /* Cocoa.framework */; };
-		2281C46C186020FA009982C9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2281C46A186020FA009982C9 /* MainMenu.xib */; };
 		2281C48F18602424009982C9 /* SYXTextLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C48E18602424009982C9 /* SYXTextLink.m */; };
 		2281C498186042C2009982C9 /* SYXThreePartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C496186042C2009982C9 /* SYXThreePartButton.m */; };
 		2281C49E18604496009982C9 /* SYXCommonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C49D18604496009982C9 /* SYXCommonUI.m */; };
@@ -24,6 +23,7 @@
 		2281C4DA1860670D009982C9 /* DownloadMgrOpenPressL.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4D11860670D009982C9 /* DownloadMgrOpenPressL.png */; };
 		2281C4DB1860670D009982C9 /* DownloadMgrOpenPressR.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4D21860670D009982C9 /* DownloadMgrOpenPressR.png */; };
 		2281C4DC1860670D009982C9 /* DownloadMgrOpenR.png in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4D31860670D009982C9 /* DownloadMgrOpenR.png */; };
+		2281C4E418606E3F009982C9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2281C4E218606E3F009982C9 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,6 @@
 		2281C458186020FA009982C9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2281C459186020FA009982C9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2281C45A186020FA009982C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2281C46B186020FA009982C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2281C474186020FA009982C9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2281C48D18602424009982C9 /* SYXTextLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXTextLink.h; sourceTree = "<group>"; };
 		2281C48E18602424009982C9 /* SYXTextLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXTextLink.m; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		2281C4D11860670D009982C9 /* DownloadMgrOpenPressL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenPressL.png; sourceTree = "<group>"; };
 		2281C4D21860670D009982C9 /* DownloadMgrOpenPressR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenPressR.png; sourceTree = "<group>"; };
 		2281C4D31860670D009982C9 /* DownloadMgrOpenR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadMgrOpenR.png; sourceTree = "<group>"; };
+		2281C4E318606E3F009982C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,6 @@
 			children = (
 				2281C4BA18606686009982C9 /* Source */,
 				2281C49918604363009982C9 /* Resources */,
-				2281C46A186020FA009982C9 /* MainMenu.xib */,
 			);
 			path = CocoaSample;
 			sourceTree = "<group>";
@@ -167,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				2281C4C91860670D009982C9 /* Image Files */,
+				2281C4E118606E3F009982C9 /* Base.lproj */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,6 +213,14 @@
 				2281C4D31860670D009982C9 /* DownloadMgrOpenR.png */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		2281C4E118606E3F009982C9 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2281C4E218606E3F009982C9 /* MainMenu.xib */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2281C4D81860670D009982C9 /* DownloadMgrOpenL.png in Resources */,
-				2281C46C186020FA009982C9 /* MainMenu.xib in Resources */,
 				2281C4D41860670D009982C9 /* DownloadMgrOpenF.png in Resources */,
 				2281C4C7186066EF009982C9 /* CocoaSample-Info.plist in Resources */,
+				2281C4E418606E3F009982C9 /* MainMenu.xib in Resources */,
 				2281C4D61860670D009982C9 /* DownloadMgrOpenHLL.png in Resources */,
 				2281C4D51860670D009982C9 /* DownloadMgrOpenHLF.png in Resources */,
 				2281C4DA1860670D009982C9 /* DownloadMgrOpenPressL.png in Resources */,
@@ -299,10 +307,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2281C46A186020FA009982C9 /* MainMenu.xib */ = {
+		2281C4E218606E3F009982C9 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2281C46B186020FA009982C9 /* Base */,
+				2281C4E318606E3F009982C9 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
