@@ -650,24 +650,88 @@
         <window title="CocoaSample" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="701" height="467"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="701" height="467"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNq-ak-lOq" customClass="SYXTextLink">
-                        <rect key="frame" x="170" y="15" width="156" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    </customView>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xz2-Rk-8vE" customClass="SYXThreePartButton">
-                        <rect key="frame" x="183" y="236" width="61" height="16"/>
+                    <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ec-1k-GLg">
+                        <rect key="frame" x="13" y="46" width="660" height="406"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UaR-gH-hWB">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                    </button>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="btn" identifier="1" id="Qn9-SC-4EH">
+                                <view key="view" id="zDg-Yf-NtI">
+                                    <rect key="frame" x="10" y="33" width="640" height="360"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xz2-Rk-8vE" customClass="SYXThreePartButton">
+                                            <rect key="frame" x="34" y="316" width="61" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UaR-gH-hWB">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="link" identifier="2" id="KG9-Yd-sGf">
+                                <view key="view" ambiguous="YES" id="stT-aQ-bVR">
+                                    <rect key="frame" x="10" y="33" width="640" height="360"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNq-ak-lOq" customClass="SYXTextLink">
+                                            <rect key="frame" x="17" y="314" width="156" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        </customView>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Item 2" identifier="" id="COo-WQ-YlD">
+                                <view key="view" id="cbP-3P-FV3">
+                                    <rect key="frame" x="10" y="33" width="640" height="360"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Item 3" identifier="" id="IRT-YI-C8u">
+                                <view key="view" id="SSa-5K-dUk">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Item 4" identifier="" id="f2N-dU-rLw">
+                                <view key="view" id="Xhv-Jr-2IG">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Item 5" identifier="" id="5tC-dO-ePL">
+                                <view key="view" id="ODU-KC-2lL">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Item 6" identifier="" id="0c6-dI-WIl">
+                                <view key="view" id="qQ8-U8-hXy">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Item 7" identifier="" id="b8J-mC-7jc">
+                                <view key="view" id="WCR-5u-9R1">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Item 8" identifier="" id="blp-ds-fa9">
+                                <view key="view" id="5EK-bV-OYb">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Item 9" identifier="" id="8fe-me-IR9">
+                                <view key="view" id="8Mn-kH-U1G">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
                 </subviews>
             </view>
         </window>
