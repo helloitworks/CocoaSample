@@ -7,6 +7,7 @@
 //
 
 #import "SYXBaseTableViewWndCtrl.h"
+#import "SYXApplicationBundleInfo+View.h"
 
 @interface SYXBaseTableViewWndCtrl ()
 
@@ -101,8 +102,9 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
     }
     else if ([identifier isEqualToString:SYXBaseTableViewColumnCheckBox])
     {
-        NSButton *button = [tableView makeViewWithIdentifier:identifier owner:self];
-        return button;
+        NSButton *chkRow = [tableView makeViewWithIdentifier:identifier owner:self];
+        chkRow.state = bundleInfo.isChecked;
+        return chkRow;
     }
     else
     {
@@ -153,12 +155,11 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
 }
 
 
-- (IBAction)checkBoxChecked:(id)sender
+- (IBAction)chkRowChecked:(id)sender
 {
     NSInteger row = [self.tableView rowForView:sender];
-
-    NSButton *checkBox = (NSButton *)sender;
-    if (checkBox.state == NSOnState)
+    NSButton *chkRow = (NSButton *)sender;
+    if (chkRow.state == NSOnState)
     {
         self.lblMsg.stringValue = [NSString stringWithFormat:@"you check row %ld",row];
     }
@@ -166,6 +167,28 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
     {
         self.lblMsg.stringValue = [NSString stringWithFormat:@"you uncheck row %ld",row];
     }
+}
+
+- (IBAction)chkAllChecked:(id)sender
+{
+    NSButton *chkAll = (NSButton *)sender;
+    if (chkAll.state == NSOnState)
+    {
+        [self.tableContents enumerateObjectsUsingBlock:^(SYXApplicationBundleInfo *bundleInfo, NSUInteger idx, BOOL *stop)
+        {
+            bundleInfo.isChecked = YES;
+        }];
+        self.lblMsg.stringValue = [NSString stringWithFormat:@"you check all"];
+    }
+    else
+    {
+        [self.tableContents enumerateObjectsUsingBlock:^(SYXApplicationBundleInfo *bundleInfo, NSUInteger idx, BOOL *stop)
+        {
+            bundleInfo.isChecked = NO;
+        }];
+        self.lblMsg.stringValue = [NSString stringWithFormat:@"you uncheck all"];
+    }
+    [self.tableView reloadData];
 }
 
 

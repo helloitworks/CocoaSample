@@ -33,6 +33,7 @@
 		22C39DBE1861C3EF00EB8D7D /* SYXTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C39DBD1861C3EF00EB8D7D /* SYXTableCellView.m */; };
 		22C39DC318628F2500EB8D7D /* SYXBaseTableViewWndCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C39DC218628F2500EB8D7D /* SYXBaseTableViewWndCtrl.m */; };
 		22C39DC518628F6F00EB8D7D /* SYXBaseTableViewWnd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C39DC418628F6F00EB8D7D /* SYXBaseTableViewWnd.xib */; };
+		22C39DCB18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C39DCA18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,8 @@
 		22C39DC118628F2500EB8D7D /* SYXBaseTableViewWndCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXBaseTableViewWndCtrl.h; sourceTree = "<group>"; };
 		22C39DC218628F2500EB8D7D /* SYXBaseTableViewWndCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXBaseTableViewWndCtrl.m; sourceTree = "<group>"; };
 		22C39DC418628F6F00EB8D7D /* SYXBaseTableViewWnd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYXBaseTableViewWnd.xib; sourceTree = "<group>"; };
+		22C39DC918632B4300EB8D7D /* SYXApplicationBundleInfo+View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SYXApplicationBundleInfo+View.h"; sourceTree = "<group>"; };
+		22C39DCA18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SYXApplicationBundleInfo+View.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +283,8 @@
 				22C39DC118628F2500EB8D7D /* SYXBaseTableViewWndCtrl.h */,
 				22C39DC218628F2500EB8D7D /* SYXBaseTableViewWndCtrl.m */,
 				22C39DC418628F6F00EB8D7D /* SYXBaseTableViewWnd.xib */,
+				22C39DC918632B4300EB8D7D /* SYXApplicationBundleInfo+View.h */,
+				22C39DCA18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m */,
 			);
 			path = BaseTableView;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				22C39D551861A06000EB8D7D /* SYXTableRowView.m in Sources */,
 				2281C498186042C2009982C9 /* SYXThreePartButton.m in Sources */,
 				22C39DC318628F2500EB8D7D /* SYXBaseTableViewWndCtrl.m in Sources */,
+				22C39DCB18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m in Sources */,
 				22C39DBB1861BF8300EB8D7D /* NSString+Extension.m in Sources */,
 				2281C49E18604496009982C9 /* SYXCommonUI.m in Sources */,
 				2281C4C318606686009982C9 /* SYXAppDelegate.m in Sources */,

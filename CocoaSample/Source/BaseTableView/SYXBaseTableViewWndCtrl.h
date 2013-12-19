@@ -21,6 +21,7 @@
 @property (retain) IBOutlet NSTextField *lblMsg;;
 
 - (IBAction)btnRunClicked:(id)sender;
-- (IBAction)checkBoxChecked:(id)sender;
+- (IBAction)chkRowChecked:(id)sender;
+- (IBAction)chkAllChecked:(id)sender;
 
 @end

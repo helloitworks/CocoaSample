@@ -56,10 +56,10 @@
                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ELL-Yw-N1z">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
-                                                        <connections>
-                                                            <action selector="checkBoxChecked:" target="-2" id="MVA-XL-DS4"/>
-                                                        </connections>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="chkRowChecked:" target="-2" id="aGv-BC-gMs"/>
+                                                    </connections>
                                                 </button>
                                             </prototypeCellViews>
                                         </tableColumn>
@@ -199,9 +199,29 @@
                         </tableHeaderView>
                     </scrollView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISP-J2-3HP">
-                        <rect key="frame" x="31" y="13" width="378" height="17"/>
+                        <rect key="frame" x="190" y="13" width="326" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="msg" id="LBS-22-2Av">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="LBS-22-2Av">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Fi-Hy-2Ue">
+                        <rect key="frame" x="31" y="11" width="77" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="check all" bezelStyle="regularSquare" imagePosition="left" inset="2" id="rF4-1c-Xu4">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="chkAllChecked:" target="-2" id="Z7G-9N-aG5"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91K-YG-GXX">
+                        <rect key="frame" x="140" y="12" width="48" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="event:" id="qY9-5g-LE6">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
