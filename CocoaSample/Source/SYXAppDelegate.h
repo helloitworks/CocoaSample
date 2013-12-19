@@ -17,6 +17,8 @@
     SYXTextLink *_textLink;
     SYXThreePartButton *_threePartButton;
     SYXBaseTableViewWndCtrl *_baseTableViewWndCtrl;
+    
+    NSTextField *_lblMsg;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -24,6 +26,7 @@
 @property (retain) IBOutlet SYXThreePartButton *threePartButton;
 @property (retain) IBOutlet SYXBaseTableViewWndCtrl *baseTableViewWndCtrl;
 
+@property (retain) IBOutlet NSTextField *lblMsg;
 
 - (IBAction)baseTableViewClicked:(id)sender;
 
