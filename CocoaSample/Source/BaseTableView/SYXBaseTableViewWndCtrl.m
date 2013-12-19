@@ -145,7 +145,8 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
     
 }
 
-//需要在xib中，设置tableview的delegate跟datasource后，这个action才有响应
+//in xib file, set tableview delegate and datasource, only after that, this action can take effect.
+//set tableview delegat and datasource at this class at awakeFromNib function, this action can not take effect, it is wired.
 - (IBAction)btnRunClicked:(id)sender
 {
     NSInteger row = [self.tableView rowForView:sender];
