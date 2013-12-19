@@ -10,6 +10,7 @@
 @interface SYXApplicationBundleInfo : NSObject
 {
     NSString* _name;
+    NSString* _displayName;
     NSString* _bundleId;
     NSString* _version;
     NSString* _iconPath;
@@ -17,6 +18,7 @@
     NSString* _longVersion;
 }
 @property(retain)NSString* name;
+@property(retain)NSString* displayName;
 @property(retain)NSString* bundleId;
 @property(retain)NSString* version;                 // suggest version
 @property(retain)NSString* iconPath;

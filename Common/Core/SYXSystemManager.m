@@ -10,11 +10,12 @@
 #include <stdlib.h>
 
 @implementation SYXApplicationBundleInfo
+@synthesize name = _name;
+@synthesize displayName = _displayName;
 @synthesize bundleId = _bundleId;
 @synthesize version = _version;
 @synthesize iconPath = _iconPath;
 @synthesize path = _path;
-@synthesize name = _name;
 @synthesize longVersion = _longVersion;
 -(NSString*)description
 {
@@ -22,12 +23,13 @@
 }
 -(void)dealloc
 {
+    self.name = nil;
+    self.displayName = nil;
     self.longVersion = nil;
     self.bundleId = nil;
     self.version = nil;
     self.iconPath = nil;
     self.path = nil;
-    self.name = nil;
     [super dealloc];
 }
 
@@ -130,6 +132,7 @@
             info.longVersion = [infoDict objectForKey:@"CFBundleVersion"];
             info.version = [self makeSuggestVersionWithLong:info.longVersion short:shortVer];
             info.name = [infoDict objectForKey:@"CFBundleName"];
+            info.displayName =  [[NSFileManager defaultManager] displayNameAtPath:path];
             info.bundleId = [identifier lowercaseString];
             info.iconPath = [infoDict objectForKey:@"CFBundleIconFile"];
             info.path = path;

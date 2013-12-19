@@ -77,7 +77,7 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
         // We pass us as the owner so we can setup target/actions into this main controller object
         NSTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
         // Then setup properties on the cellView based on the column
-        cellView.textField.stringValue = bundleInfo.name== nil ? @"nil": bundleInfo.name ;
+        cellView.textField.stringValue = bundleInfo.displayName== nil ? @"nil": bundleInfo.displayName ;
         cellView.imageView.image = [[[NSWorkspace sharedWorkspace] iconForFile:bundleInfo.path] retain];
         return cellView;
         
