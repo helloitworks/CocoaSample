@@ -8,15 +8,18 @@
 
 #import "SYXAppDelegate.h"
 #import "UI.h"
+#import "SYXBaseTableViewWndCtrl.h"
 @implementation SYXAppDelegate
 @synthesize textLink = _textLink;
 @synthesize threePartButton = _threePartButton;
+@synthesize baseTableViewWndCtrl = _baseTableViewWndCtrl;
 
 NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    [[SYXLogger sharedInstance] setFilePathName:@"/tmp/CocoaSample.log"];    
 }
 - (void)awakeFromNib
 {
@@ -47,5 +50,12 @@ NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
     NSURL *url = [[[NSURL alloc] initWithString:strUrl] autorelease];
     [[NSWorkspace sharedWorkspace] openURL:url];
     
+}
+- (IBAction)baseTableViewClicked:(id)sender
+{
+    if (self.baseTableViewWndCtrl == nil) {
+        self.baseTableViewWndCtrl = [[SYXBaseTableViewWndCtrl alloc] init];
+    }
+    [self.baseTableViewWndCtrl showWindow:self];
 }
 @end

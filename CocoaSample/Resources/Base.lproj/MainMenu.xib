@@ -678,7 +678,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="link" identifier="2" id="KG9-Yd-sGf">
-                                <view key="view" ambiguous="YES" id="stT-aQ-bVR">
+                                <view key="view" id="stT-aQ-bVR">
                                     <rect key="frame" x="10" y="33" width="640" height="360"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -690,14 +690,28 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Item 2" identifier="" id="COo-WQ-YlD">
-                                <view key="view" id="cbP-3P-FV3">
+                                <view key="view" ambiguous="YES" id="cbP-3P-FV3">
                                     <rect key="frame" x="10" y="33" width="640" height="360"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sza-JY-90C">
+                                            <rect key="frame" x="38" y="302" width="133" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="BaseTableView" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CN3-Hk-24Y">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="baseTableViewClicked:" target="494" id="pUz-aE-7No"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Item 3" identifier="" id="IRT-YI-C8u">
                                 <view key="view" id="SSa-5K-dUk">
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <rect key="frame" x="10" y="33" width="640" height="360"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Item 4" identifier="" id="f2N-dU-rLw">
@@ -737,6 +751,7 @@
         </window>
         <customObject id="494" customClass="SYXAppDelegate">
             <connections>
+                <outlet property="baseTableViewClicked" destination="Sza-JY-90C" id="bdr-o9-Shy"/>
                 <outlet property="textLink" destination="zNq-ak-lOq" id="EjP-UT-ak0"/>
                 <outlet property="threePartButton" destination="xz2-Rk-8vE" id="R5a-cA-R2D"/>
                 <outlet property="window" destination="371" id="532"/>

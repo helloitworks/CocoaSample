@@ -1,0 +1,172 @@
+//
+//  SYXBaseTableViewWndCtrl.m
+//  CocoaSample
+//
+//  Created by Shen Yixin on 13-12-19.
+//
+//
+
+#import "SYXBaseTableViewWndCtrl.h"
+
+@interface SYXBaseTableViewWndCtrl ()
+
+@end
+
+NSString *const SYXBaseTableViewColumnCheckBox = @"CheckBox";
+NSString *const SYXBaseTableViewColumnAppName = @"AppName";
+NSString *const SYXBaseTableViewColumnAppVersion = @"AppVersion";
+NSString *const SYXBaseTableViewColumnBundleId = @"BundleId";
+NSString *const SYXBaseTableViewColumnOperation = @"Operation";
+
+@implementation SYXBaseTableViewWndCtrl
+@synthesize tableContents = _tableContents;
+@synthesize tableView = _tableView;
+@synthesize lblMsg = _lblMsg;
+
+- (id)init{
+    self = [super initWithWindowNibName:@"SYXBaseTableViewWnd"];
+    if (self) {
+        _tableContents = [[NSMutableArray alloc] init];
+   
+    }
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    [self.tableView setDoubleAction:@selector(tableViewDoubleClick:)];
+
+}
+
+- (void)windowDidLoad
+{
+    [super windowDidLoad];
+    [self loadApp];
+
+}
+
+- (void)loadApp
+{
+    NSString *appDirectory = [SYXSystemManager defaultApplicationPath:NSSystemDomainMask];
+    self.tableContents = [NSMutableArray arrayWithArray:[[SYXSystemManager bundleInfosInDirectory:appDirectory searchLevel:1] allValues]];
+    [self.tableView reloadData];
+}
+
+// The only essential/required tableview dataSource method
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return [self.tableContents count];
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+	return 24.f;
+}
+
+// This method is optional if you use bindings to provide the data
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    // Group our "model" object, which is a dictionary
+    SYXApplicationBundleInfo *bundleInfo = [self.tableContents objectAtIndex:row];
+    
+    // In IB the tableColumn has the identifier set to the same string as the keys in our dictionary
+    NSString *identifier = [tableColumn identifier];
+    
+    if ([identifier isEqualToString:SYXBaseTableViewColumnAppName])
+    {
+        // We pass us as the owner so we can setup target/actions into this main controller object
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
+        // Then setup properties on the cellView based on the column
+        cellView.textField.stringValue = bundleInfo.name== nil ? @"nil": bundleInfo.name ;
+        cellView.imageView.image = [[[NSWorkspace sharedWorkspace] iconForFile:bundleInfo.path] retain];
+        return cellView;
+        
+    }
+    else if ([identifier isEqualToString:SYXBaseTableViewColumnAppVersion])
+    {
+        NSTextField *textField = [tableView makeViewWithIdentifier:identifier owner:self];
+        textField.objectValue = bundleInfo.version == nil ? @"nil": bundleInfo.version ;
+        return textField;
+    }
+    else if ([identifier isEqualToString:SYXBaseTableViewColumnBundleId])
+    {
+        NSTextField *textField = [tableView makeViewWithIdentifier:identifier owner:self];
+        textField.objectValue = bundleInfo.bundleId == nil ? @"nil": bundleInfo.bundleId ;
+        return textField;
+    }
+    else if ([identifier isEqualToString:SYXBaseTableViewColumnOperation])
+    {
+        NSButton *button = [tableView makeViewWithIdentifier:identifier owner:self];
+        button.title = @"run";
+        return button;
+    }
+    else if ([identifier isEqualToString:SYXBaseTableViewColumnCheckBox])
+    {
+        NSButton *button = [tableView makeViewWithIdentifier:identifier owner:self];
+        return button;
+    }
+    else
+    {
+        NSAssert1(NO, @"Unhandled table column identifier %@", identifier);
+    }
+    return nil;
+}
+
+
+//click or select
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification
+{
+    NSIndexSet *selectedRowIndexs = [self.tableView selectedRowIndexes];
+	if(selectedRowIndexs == nil || selectedRowIndexs.count == 0 )
+    {
+		return;
+	}
+    else if(selectedRowIndexs.count == 1)
+    {
+        NSInteger row = selectedRowIndexs.firstIndex;
+        self.lblMsg.stringValue = [NSString stringWithFormat:@"you click row %ld",row];
+    }
+    else
+    {
+        self.lblMsg.stringValue = [NSString stringWithFormat:@"you select multiple row"];
+    }
+}
+
+
+//double click row
+- (void)tableViewDoubleClick:(id)sender
+{
+    NSInteger row = [self.tableView selectedRow];
+    if (row != -1)
+    {
+        self.lblMsg.stringValue = [NSString stringWithFormat:@"you double click row %ld",row];
+    }
+    
+}
+
+//需要在xib中，设置tableview的delegate跟datasource后，这个action才有响应
+- (IBAction)btnRunClicked:(id)sender
+{
+    NSInteger row = [self.tableView rowForView:sender];
+    SYXApplicationBundleInfo *bundleInfo = [self.tableContents objectAtIndex:row];
+     [[NSWorkspace sharedWorkspace] openFile:bundleInfo.path];
+    //[[NSWorkspace sharedWorkspace] selectFile:bundleInfo.path inFileViewerRootedAtPath:nil];
+}
+
+
+- (IBAction)checkBoxChecked:(id)sender
+{
+    NSInteger row = [self.tableView rowForView:sender];
+
+    NSButton *checkBox = (NSButton *)sender;
+    if (checkBox.state == NSOnState)
+    {
+        self.lblMsg.stringValue = [NSString stringWithFormat:@"you check row %ld",row];
+    }
+    else
+    {
+        self.lblMsg.stringValue = [NSString stringWithFormat:@"you uncheck row %ld",row];
+    }
+}
+
+
+@end
