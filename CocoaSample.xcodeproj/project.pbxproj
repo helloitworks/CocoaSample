@@ -34,6 +34,7 @@
 		22C39DC318628F2500EB8D7D /* SYXBaseTableViewWndCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C39DC218628F2500EB8D7D /* SYXBaseTableViewWndCtrl.m */; };
 		22C39DC518628F6F00EB8D7D /* SYXBaseTableViewWnd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C39DC418628F6F00EB8D7D /* SYXBaseTableViewWnd.xib */; };
 		22C39DCB18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C39DCA18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m */; };
+		22C39DCF1863327D00EB8D7D /* SYXTextFieldWithRedColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C39DCE1863327D00EB8D7D /* SYXTextFieldWithRedColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,8 @@
 		22C39DC418628F6F00EB8D7D /* SYXBaseTableViewWnd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYXBaseTableViewWnd.xib; sourceTree = "<group>"; };
 		22C39DC918632B4300EB8D7D /* SYXApplicationBundleInfo+View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SYXApplicationBundleInfo+View.h"; sourceTree = "<group>"; };
 		22C39DCA18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SYXApplicationBundleInfo+View.m"; sourceTree = "<group>"; };
+		22C39DCD1863327D00EB8D7D /* SYXTextFieldWithRedColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXTextFieldWithRedColor.h; sourceTree = "<group>"; };
+		22C39DCE1863327D00EB8D7D /* SYXTextFieldWithRedColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXTextFieldWithRedColor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,7 @@
 		2281C48B18602424009982C9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				22C39DCC1863326200EB8D7D /* TextField */,
 				22C39D521861A04400EB8D7D /* TableView */,
 				2281C49218604289009982C9 /* Button */,
 				2281C48C18602424009982C9 /* Link */,
@@ -289,6 +293,15 @@
 			path = BaseTableView;
 			sourceTree = "<group>";
 		};
+		22C39DCC1863326200EB8D7D /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				22C39DCD1863327D00EB8D7D /* SYXTextFieldWithRedColor.h */,
+				22C39DCE1863327D00EB8D7D /* SYXTextFieldWithRedColor.m */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +379,7 @@
 				22C39D5B1861A29C00EB8D7D /* SYXSystemManager.m in Sources */,
 				22C39DB71861A8D000EB8D7D /* NSDate+Extension.m in Sources */,
 				2281C4C8186066EF009982C9 /* main.m in Sources */,
+				22C39DCF1863327D00EB8D7D /* SYXTextFieldWithRedColor.m in Sources */,
 				22C39D551861A06000EB8D7D /* SYXTableRowView.m in Sources */,
 				2281C498186042C2009982C9 /* SYXThreePartButton.m in Sources */,
 				22C39DC318628F2500EB8D7D /* SYXBaseTableViewWndCtrl.m in Sources */,

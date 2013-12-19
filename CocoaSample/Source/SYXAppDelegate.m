@@ -13,7 +13,6 @@
 @synthesize textLink = _textLink;
 @synthesize threePartButton = _threePartButton;
 @synthesize baseTableViewWndCtrl = _baseTableViewWndCtrl;
-@synthesize lblMsg = _lblMsg;
 
 NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
 
@@ -44,9 +43,6 @@ NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
     self.threePartButton.secondeImageHover = [NSImage imageNamed:@"DownloadMgrOpenHLF"];
     self.threePartButton.thirdImageHover = [NSImage imageNamed:@"DownloadMgrOpenHLR"];
     
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"attributed String" attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:@"Helvetica" size:14],NSFontAttributeName,[NSColor redColor], NSForegroundColorAttributeName,nil]];
-    //attributedString setValue:[NSColor whiteColor] forKey:NSForegroundColorAttributeName
-    self.lblMsg.attributedStringValue = attributedString;
 }
 
 - (IBAction)onTextLink:(id)sender
