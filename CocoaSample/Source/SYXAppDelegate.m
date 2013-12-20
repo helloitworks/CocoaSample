@@ -19,7 +19,8 @@ NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    [[SYXLogger sharedInstance] setFilePathName:@"/tmp/CocoaSample.log"];    
+    [[SYXLogger sharedInstance] setFilePathName:@"/tmp/CocoaSample.log"];
+    LOG_DEBUG(@"it is a test");
 }
 - (void)awakeFromNib
 {
