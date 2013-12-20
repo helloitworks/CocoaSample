@@ -19,17 +19,21 @@
     return self;
 }
 
-
-- (void)drawRect:(NSRect)dirtyRect
+- (void)awakeFromNib
 {
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:self.stringValue attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSColor redColor], NSForegroundColorAttributeName,nil]];
-    self.attributedStringValue = attributedString;
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithAttributedString:[self attributedStringValue]];
+    NSRange range = NSMakeRange(0, self.stringValue.length);
+    [attString addAttribute:NSForegroundColorAttributeName value:[NSColor redColor] range:range];
+    self.attributedStringValue = attString;
     
     /*
      NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"attributed String" attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:@"Helvetica" size:14],NSFontAttributeName,[NSColor redColor], NSForegroundColorAttributeName,nil]];
      //attributedString setValue:[NSColor whiteColor] forKey:NSForegroundColorAttributeName
      */
-    
+}
+
+- (void)drawRect:(NSRect)dirtyRect
+{
 	[super drawRect:dirtyRect];
     // Drawing code here.
 }

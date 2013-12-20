@@ -59,7 +59,8 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
     return [self.tableContents count];
 }
 
-- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
+{
 	return 24.f;
 }
 
