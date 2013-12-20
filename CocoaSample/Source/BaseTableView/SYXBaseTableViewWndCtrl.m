@@ -53,11 +53,20 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
     [self.tableView reloadData];
 }
 
+- (SYXApplicationBundleInfo *)_entityForRow:(NSInteger)row {
+    return (SYXApplicationBundleInfo *)[self.tableContents objectAtIndex:row];
+}
+
+
+#pragma mark - tableview datasource
 // The only essential/required tableview dataSource method
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
     return [self.tableContents count];
 }
+
+
+#pragma mark - tableview delegate
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
 {
@@ -68,7 +77,7 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     // Group our "model" object, which is a dictionary
-    SYXApplicationBundleInfo *bundleInfo = [self.tableContents objectAtIndex:row];
+    SYXApplicationBundleInfo *bundleInfo = [self _entityForRow:row];
     
     // In IB the tableColumn has the identifier set to the same string as the keys in our dictionary
     NSString *identifier = [tableColumn identifier];
@@ -134,7 +143,7 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
     }
 }
 
-
+#pragma mark - tableview action
 //double click row
 - (void)tableViewDoubleClick:(id)sender
 {
@@ -146,12 +155,14 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
     
 }
 
+
+#pragma mark - tablerowview control action
 //in xib file, set tableview delegate and datasource, only after that, this action can take effect.
 //set tableview delegat and datasource at this class at awakeFromNib function, this action can not take effect, it is wired.
 - (IBAction)btnRunClicked:(id)sender
 {
     NSInteger row = [self.tableView rowForView:sender];
-    SYXApplicationBundleInfo *bundleInfo = [self.tableContents objectAtIndex:row];
+    SYXApplicationBundleInfo *bundleInfo = [self _entityForRow:row];
      [[NSWorkspace sharedWorkspace] openFile:bundleInfo.path];
     //[[NSWorkspace sharedWorkspace] selectFile:bundleInfo.path inFileViewerRootedAtPath:nil];
 }
