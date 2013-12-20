@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225FAF5E1864129400D98628 /* SYXComplexTableViewWndCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 225FAF5D1864129400D98628 /* SYXComplexTableViewWndCtrl.m */; };
+		225FAF60186412B500D98628 /* SYXComplexTableViewWnd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225FAF5F186412B500D98628 /* SYXComplexTableViewWnd.xib */; };
 		2281C456186020FA009982C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281C455186020FA009982C9 /* Cocoa.framework */; };
 		2281C48F18602424009982C9 /* SYXTextLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C48E18602424009982C9 /* SYXTextLink.m */; };
 		2281C498186042C2009982C9 /* SYXThreePartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C496186042C2009982C9 /* SYXThreePartButton.m */; };
@@ -39,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		225FAF5C1864129400D98628 /* SYXComplexTableViewWndCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXComplexTableViewWndCtrl.h; sourceTree = "<group>"; };
+		225FAF5D1864129400D98628 /* SYXComplexTableViewWndCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXComplexTableViewWndCtrl.m; sourceTree = "<group>"; };
+		225FAF5F186412B500D98628 /* SYXComplexTableViewWnd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYXComplexTableViewWnd.xib; sourceTree = "<group>"; };
 		2281C452186020FA009982C9 /* CocoaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2281C455186020FA009982C9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2281C458186020FA009982C9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225FAF5B1864127800D98628 /* ComplexTableView */ = {
+			isa = PBXGroup;
+			children = (
+				225FAF5C1864129400D98628 /* SYXComplexTableViewWndCtrl.h */,
+				225FAF5D1864129400D98628 /* SYXComplexTableViewWndCtrl.m */,
+				225FAF5F186412B500D98628 /* SYXComplexTableViewWnd.xib */,
+			);
+			path = ComplexTableView;
+			sourceTree = "<group>";
+		};
 		2281C449186020FA009982C9 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				22C39DC018628D3F00EB8D7D /* BaseTableView */,
+				225FAF5B1864127800D98628 /* ComplexTableView */,
 				2281C4BF18606686009982C9 /* SYXAppDelegate.h */,
 				2281C4C018606686009982C9 /* SYXAppDelegate.m */,
 				2281C4E218606E3F009982C9 /* MainMenu.xib */,
@@ -365,6 +381,7 @@
 				2281C4E418606E3F009982C9 /* MainMenu.xib in Resources */,
 				2281C4D61860670D009982C9 /* DownloadMgrOpenHLL.png in Resources */,
 				2281C4D51860670D009982C9 /* DownloadMgrOpenHLF.png in Resources */,
+				225FAF60186412B500D98628 /* SYXComplexTableViewWnd.xib in Resources */,
 				2281C4DA1860670D009982C9 /* DownloadMgrOpenPressL.png in Resources */,
 				2281C4D71860670D009982C9 /* DownloadMgrOpenHLR.png in Resources */,
 				2281C4D91860670D009982C9 /* DownloadMgrOpenPressF.png in Resources */,
@@ -383,6 +400,7 @@
 			files = (
 				22C39D5B1861A29C00EB8D7D /* SYXSystemManager.m in Sources */,
 				22C39E3F1863E64000EB8D7D /* NSError+Extension.m in Sources */,
+				225FAF5E1864129400D98628 /* SYXComplexTableViewWndCtrl.m in Sources */,
 				22C39DB71861A8D000EB8D7D /* NSDate+Extension.m in Sources */,
 				2281C4C8186066EF009982C9 /* main.m in Sources */,
 				22C39DCF1863327D00EB8D7D /* SYXTextFieldWithRedColor.m in Sources */,
