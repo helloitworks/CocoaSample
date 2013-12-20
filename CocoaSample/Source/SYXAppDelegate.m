@@ -9,10 +9,13 @@
 #import "SYXAppDelegate.h"
 #import "UI.h"
 #import "SYXBaseTableViewWndCtrl.h"
+#import "SYXComplexTableViewWndCtrl.h"
+
 @implementation SYXAppDelegate
 @synthesize textLink = _textLink;
 @synthesize threePartButton = _threePartButton;
 @synthesize baseTableViewWndCtrl = _baseTableViewWndCtrl;
+@synthesize complexTableViewWndCtrl = _complexTableViewWndCtrl;
 
 NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
 
@@ -53,11 +56,20 @@ NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
     [[NSWorkspace sharedWorkspace] openURL:url];
     
 }
-- (IBAction)baseTableViewClicked:(id)sender
+- (IBAction)btnBaseTableViewClicked:(id)sender
 {
     if (self.baseTableViewWndCtrl == nil) {
         self.baseTableViewWndCtrl = [[SYXBaseTableViewWndCtrl alloc] init];
     }
     [self.baseTableViewWndCtrl showWindow:self];
 }
+
+- (IBAction)btnComplexTableViewClicked:(id)sender
+{
+    if (self.complexTableViewWndCtrl == nil) {
+        self.complexTableViewWndCtrl = [[SYXComplexTableViewWndCtrl alloc] init];
+    }
+    [self.complexTableViewWndCtrl showWindow:self];
+}
+
 @end

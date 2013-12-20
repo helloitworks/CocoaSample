@@ -9,15 +9,15 @@
 #import "SYXBaseTableViewWndCtrl.h"
 #import "SYXApplicationBundleInfo+View.h"
 
-@interface SYXBaseTableViewWndCtrl ()
-
-@end
-
 NSString *const SYXBaseTableViewColumnCheckBox = @"CheckBox";
 NSString *const SYXBaseTableViewColumnAppName = @"AppName";
 NSString *const SYXBaseTableViewColumnAppVersion = @"AppVersion";
 NSString *const SYXBaseTableViewColumnBundleId = @"BundleId";
 NSString *const SYXBaseTableViewColumnOperation = @"Operation";
+
+@interface SYXBaseTableViewWndCtrl ()
+
+@end
 
 @implementation SYXBaseTableViewWndCtrl
 @synthesize tableContents = _tableContents;
@@ -33,17 +33,11 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
     return self;
 }
 
-- (void)awakeFromNib
-{
-    [self.tableView setDoubleAction:@selector(tableViewDoubleClick:)];
-
-}
-
 - (void)windowDidLoad
 {
     [super windowDidLoad];
+    [self.tableView setDoubleAction:@selector(tableViewDoubleClick:)];
     [self loadApp];
-
 }
 
 - (void)loadApp

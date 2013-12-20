@@ -12,7 +12,6 @@
 {
     NSMutableArray *_tableContents;
     NSTableView *_tableView;
-    
     NSTextField *_lblMsg;
 }
 

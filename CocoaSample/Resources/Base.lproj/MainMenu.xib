@@ -663,11 +663,11 @@
                         <tabViewItems>
                             <tabViewItem label="btn" identifier="1" id="Qn9-SC-4EH">
                                 <view key="view" id="zDg-Yf-NtI">
-                                    <rect key="frame" x="10" y="33" width="640" height="360"/>
+                                    <rect key="frame" x="10" y="33" width="0.0" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xz2-Rk-8vE" customClass="SYXThreePartButton">
-                                            <rect key="frame" x="34" y="316" width="61" height="16"/>
+                                            <rect key="frame" x="34" y="-44" width="61" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UaR-gH-hWB">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -690,7 +690,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="tableview" identifier="" id="COo-WQ-YlD">
-                                <view key="view" id="cbP-3P-FV3">
+                                <view key="view" ambiguous="YES" id="cbP-3P-FV3">
                                     <rect key="frame" x="10" y="33" width="640" height="360"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -702,14 +702,25 @@
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="baseTableViewClicked:" target="494" id="pUz-aE-7No"/>
+                                                <action selector="btnBaseTableViewClicked:" target="494" id="aK3-Lx-TaL"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewZ-Wf-Fts">
+                                            <rect key="frame" x="38" y="245" width="161" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="ComplexTableView" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qVs-jG-UWg">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="btnComplexTableViewClicked:" target="494" id="YoV-3U-f27"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="label" identifier="" id="IRT-YI-C8u">
-                                <view key="view" ambiguous="YES" id="SSa-5K-dUk">
+                                <view key="view" id="SSa-5K-dUk">
                                     <rect key="frame" x="10" y="33" width="640" height="360"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>

@@ -8,17 +8,21 @@
 
 #import "SYXComplexTableViewWndCtrl.h"
 
+NSString *const SYXBaseTableViewColumnMain = @"Main";
+
 @interface SYXComplexTableViewWndCtrl ()
 
 @end
 
 @implementation SYXComplexTableViewWndCtrl
+@synthesize tableContents = _tableContents;
+@synthesize tableView = _tableView;
+@synthesize lblMsg = _lblMsg;
 
-- (id)initWithWindow:(NSWindow *)window
-{
-    self = [super initWithWindow:window];
+- (id)init{
+    self = [super initWithWindowNibName:@"SYXComplexTableViewWnd"];
     if (self) {
-        // Initialization code here.
+        _tableContents = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -26,8 +30,24 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    [self loadApp];
 }
 
+- (void)loadApp
+{
+    NSString *appDirectory = [SYXSystemManager defaultApplicationPath:NSSystemDomainMask];
+    self.tableContents = [NSMutableArray arrayWithArray:[[SYXSystemManager bundleInfosInDirectory:appDirectory searchLevel:1] allValues]];
+    [self.tableView reloadData];
+}
+
+
+- (IBAction)btnRunClicked:(id)sender
+{
+    
+}
+
+- (IBAction)btnRevealClicked:(id)sender
+{
+    
+}
 @end
