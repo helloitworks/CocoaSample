@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Common/Core/SYXSystemManager.m"
-            timestampString = "409153822.873564"
+            timestampString = "409222507.148926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "+appsInDirectory:searchLevel:"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409219897.743326"
+            timestampString = "409221009.036848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "-loadApp"
             landmarkType = "5">
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409219899.332376"
+            timestampString = "409221009.036848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "-loadApp"
             landmarkType = "5">
          </BreakpointContent>
@@ -362,12 +362,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409219901.720342"
+            timestampString = "409221009.036848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "-tableView:viewForTableColumn:row:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Common/Core/SYXSystemManager.m"
+            timestampString = "409222507.148926"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "+bundleInfoOfApp:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

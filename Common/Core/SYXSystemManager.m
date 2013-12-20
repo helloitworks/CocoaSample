@@ -17,6 +17,7 @@
 @synthesize iconPath = _iconPath;
 @synthesize path = _path;
 @synthesize longVersion = _longVersion;
+@synthesize fileSize = _fileSize;
 -(NSString*)description
 {
     return [NSString stringWithFormat:@"\nbundleId:%@\nVersion:%@\nIconPath:%@\nPath:%@\nName:%@",self.bundleId,self.version,self.iconPath,self.path,self.name];
@@ -136,10 +137,14 @@
             info.bundleId = [identifier lowercaseString];
             info.iconPath = [infoDict objectForKey:@"CFBundleIconFile"];
             info.path = path;
+            
+            //TODO: fileSize
+            
         }
     }
     return info;
 }
+
 
 /*
  ll ~/Library/Internet\ Plug-Ins

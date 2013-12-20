@@ -9,6 +9,7 @@
 #import "SYXComplexTableCellView.h"
 
 @implementation SYXComplexTableCellView
+@synthesize version = _version;
 
 - (id)initWithFrame:(NSRect)frame
 {

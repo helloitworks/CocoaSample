@@ -9,6 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface SYXComplexTableCellView : NSTableCellView
-{    
+{
+    NSTextField *_version;
 }
+
+@property (retain) IBOutlet NSTextField *version;
 @end

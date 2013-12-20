@@ -8,8 +8,10 @@
 
 #import "SYXComplexTableViewWndCtrl.h"
 #import "SYXComplexTableCellView.h"
+#import "SYXApplicationBundleInfo+ComplexTableView.h"
 
 NSString *const SYXBaseTableViewColumnMain = @"Main";
+float SYXBaseTableViewRowHeight = 42.f;
 
 @interface SYXComplexTableViewWndCtrl ()
 
@@ -58,7 +60,7 @@ NSString *const SYXBaseTableViewColumnMain = @"Main";
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
 {
-	return 24.f;
+	return SYXBaseTableViewRowHeight;
 }
 
 // This method is optional if you use bindings to provide the data
@@ -75,6 +77,7 @@ NSString *const SYXBaseTableViewColumnMain = @"Main";
         SYXComplexTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
         // Then setup properties on the cellView based on the column
         cellView.textField.stringValue = bundleInfo.displayName== nil ? @"nil": bundleInfo.displayName ;
+        cellView.version.stringValue = bundleInfo.version == nil ? @"nil" : bundleInfo.version;
         cellView.imageView.image = [[[NSWorkspace sharedWorkspace] iconForFile:bundleInfo.path] retain];
         return cellView;
     }

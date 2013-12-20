@@ -12,5 +12,7 @@
 
 -(BOOL)pathConformsToUTI:(CFStringRef)UTI;
 
++ (NSString *)fileSizeDesWithUnsignedLongLong:(unsigned long long)fileSize;
+
 
 @end

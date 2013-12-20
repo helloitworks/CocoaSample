@@ -16,6 +16,7 @@
     NSString* _iconPath;
     NSString* _path;
     NSString* _longVersion;
+    NSUInteger _fileSize;
 }
 @property(retain)NSString* name;
 @property(retain)NSString* displayName;
@@ -24,6 +25,8 @@
 @property(retain)NSString* iconPath;
 @property(retain)NSString* path;
 @property(retain)NSString* longVersion;
+@property(assign) NSUInteger fileSize;
+
 @end
 
 
