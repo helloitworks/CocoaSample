@@ -12,5 +12,6 @@
 #import "SYXCommonUI.h"
 #import "SYXTextLink.h"
 #import "SYXThreePartButton.h"
+#import "HoverTableRowView.h"
 
 #endif

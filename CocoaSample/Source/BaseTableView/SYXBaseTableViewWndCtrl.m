@@ -141,7 +141,8 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
 //double click row
 - (void)tableViewDoubleClick:(id)sender
 {
-    NSInteger row = [self.tableView selectedRow];
+    //NSInteger row = [self.tableView selectedRow];
+    NSInteger row = self.tableView.clickedRow;
     if (row != -1)
     {
         self.lblMsg.stringValue = [NSString stringWithFormat:@"you double click row %ld",row];

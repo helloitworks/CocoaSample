@@ -68,8 +68,12 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
-                                                <tableCellView id="zdJ-2D-3ye" customClass="SYXComplexTableCellView">
+                                                <customView identifier="NSTableViewRowViewKey" id="O22-6F-Nwd" customClass="HoverTableRowView">
                                                     <rect key="frame" x="1" y="1" width="240" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </customView>
+                                                <tableCellView id="zdJ-2D-3ye" customClass="SYXComplexTableCellView">
+                                                    <rect key="frame" x="1" y="45" width="240" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fHp-wG-gve">

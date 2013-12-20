@@ -11,6 +11,7 @@
 		225FAF60186412B500D98628 /* SYXComplexTableViewWnd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225FAF5F186412B500D98628 /* SYXComplexTableViewWnd.xib */; };
 		225FAF631864327A00D98628 /* SYXComplexTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225FAF621864327A00D98628 /* SYXComplexTableCellView.m */; };
 		225FAF661864372900D98628 /* SYXApplicationBundleInfo+ComplexTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225FAF651864372900D98628 /* SYXApplicationBundleInfo+ComplexTableView.m */; };
+		225FAF6C1864521900D98628 /* HoverTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225FAF6B1864521900D98628 /* HoverTableRowView.m */; };
 		2281C456186020FA009982C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281C455186020FA009982C9 /* Cocoa.framework */; };
 		2281C48F18602424009982C9 /* SYXTextLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C48E18602424009982C9 /* SYXTextLink.m */; };
 		2281C498186042C2009982C9 /* SYXThreePartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C496186042C2009982C9 /* SYXThreePartButton.m */; };
@@ -50,6 +51,8 @@
 		225FAF621864327A00D98628 /* SYXComplexTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXComplexTableCellView.m; sourceTree = "<group>"; };
 		225FAF641864372900D98628 /* SYXApplicationBundleInfo+ComplexTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SYXApplicationBundleInfo+ComplexTableView.h"; sourceTree = "<group>"; };
 		225FAF651864372900D98628 /* SYXApplicationBundleInfo+ComplexTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SYXApplicationBundleInfo+ComplexTableView.m"; sourceTree = "<group>"; };
+		225FAF6A1864521900D98628 /* HoverTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoverTableRowView.h; sourceTree = "<group>"; };
+		225FAF6B1864521900D98628 /* HoverTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoverTableRowView.m; sourceTree = "<group>"; };
 		2281C452186020FA009982C9 /* CocoaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2281C455186020FA009982C9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2281C458186020FA009982C9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -304,6 +307,8 @@
 		22C39D521861A04400EB8D7D /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				225FAF6A1864521900D98628 /* HoverTableRowView.h */,
+				225FAF6B1864521900D98628 /* HoverTableRowView.m */,
 				22C39D531861A06000EB8D7D /* SYXTableRowView.h */,
 				22C39D541861A06000EB8D7D /* SYXTableRowView.m */,
 				22C39DBC1861C3EF00EB8D7D /* SYXTableCellView.h */,
@@ -409,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C39D5B1861A29C00EB8D7D /* SYXSystemManager.m in Sources */,
+				225FAF6C1864521900D98628 /* HoverTableRowView.m in Sources */,
 				225FAF631864327A00D98628 /* SYXComplexTableCellView.m in Sources */,
 				22C39E3F1863E64000EB8D7D /* NSError+Extension.m in Sources */,
 				225FAF5E1864129400D98628 /* SYXComplexTableViewWndCtrl.m in Sources */,

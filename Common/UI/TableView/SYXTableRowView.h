@@ -14,4 +14,5 @@
     NSTrackingArea *_trackingArea;
 }
 
+@property (assign) BOOL mouseInside;
 @end
