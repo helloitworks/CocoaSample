@@ -42,7 +42,6 @@
 +(NSString*)defaultApplicationPath:(NSSearchPathDomainMask)domain;
 +(NSString*)defaultInputMethodPath:(NSSearchPathDomainMask)domain;
 
-
 +(NSString*)applicationName;
 
 /**

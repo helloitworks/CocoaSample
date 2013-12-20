@@ -35,6 +35,7 @@
 		22C39DC518628F6F00EB8D7D /* SYXBaseTableViewWnd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C39DC418628F6F00EB8D7D /* SYXBaseTableViewWnd.xib */; };
 		22C39DCB18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C39DCA18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m */; };
 		22C39DCF1863327D00EB8D7D /* SYXTextFieldWithRedColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C39DCE1863327D00EB8D7D /* SYXTextFieldWithRedColor.m */; };
+		22C39E3F1863E64000EB8D7D /* NSError+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C39E3E1863E64000EB8D7D /* NSError+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,8 @@
 		22C39DCA18632B4300EB8D7D /* SYXApplicationBundleInfo+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SYXApplicationBundleInfo+View.m"; sourceTree = "<group>"; };
 		22C39DCD1863327D00EB8D7D /* SYXTextFieldWithRedColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXTextFieldWithRedColor.h; sourceTree = "<group>"; };
 		22C39DCE1863327D00EB8D7D /* SYXTextFieldWithRedColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXTextFieldWithRedColor.m; sourceTree = "<group>"; };
+		22C39E3D1863E64000EB8D7D /* NSError+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Extension.h"; sourceTree = "<group>"; };
+		22C39E3E1863E64000EB8D7D /* NSError+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				22C39DB91861BF8300EB8D7D /* NSString+Extension.h */,
 				22C39DBA1861BF8300EB8D7D /* NSString+Extension.m */,
 				22C39DB81861A96C00EB8D7D /* Core.h */,
+				22C39E3D1863E64000EB8D7D /* NSError+Extension.h */,
+				22C39E3E1863E64000EB8D7D /* NSError+Extension.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C39D5B1861A29C00EB8D7D /* SYXSystemManager.m in Sources */,
+				22C39E3F1863E64000EB8D7D /* NSError+Extension.m in Sources */,
 				22C39DB71861A8D000EB8D7D /* NSDate+Extension.m in Sources */,
 				2281C4C8186066EF009982C9 /* main.m in Sources */,
 				22C39DCF1863327D00EB8D7D /* SYXTextFieldWithRedColor.m in Sources */,

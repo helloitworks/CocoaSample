@@ -14,5 +14,6 @@
 #import "NSFileManager+Extension.h"
 #import "NSDate+Extension.h"
 #import "NSString+Extension.h"
+#import "NSError+Extension.h"
 
 #endif

@@ -10,6 +10,18 @@
 
 @interface NSFileManager (Extension)
 
+
+
+/**
+ *  create directory safely - check file is exist(exist = success)
+ *
+ *  @param force If file exist at path but not a directory, it will auto remove if force = YES
+ *
+ *  @return if directory exist or create success, return YES
+ */
+- (BOOL) createDirectoryAtPath:(NSString *)path withIntermediateDirectories:(BOOL)createIntermediates attributes:(NSDictionary *)attributes error:(NSError **)error force:(BOOL)force;
+
+
 /**
  Deep Search a file (a iterator)
  @param directory   the directory to search

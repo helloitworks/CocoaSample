@@ -8,7 +8,47 @@
 
 #import "NSFileManager+Extension.h"
 
+NSString *const NSFileManagerExtensionError = @"NSFileManagerExtensionError";
+
 @implementation NSFileManager (Extension)
+
+- (BOOL) createDirectoryAtPath:(NSString *)path withIntermediateDirectories:(BOOL)createIntermediates attributes:(NSDictionary *)attributes error:(NSError **)error force:(BOOL)force
+{
+    BOOL isDirectory = YES;
+    BOOL isExist = [self fileExistsAtPath:path isDirectory:&isDirectory];
+    
+    BOOL result = YES;
+    if (isExist)
+    {
+        if (!isDirectory)
+        {
+            if (force)
+            {
+                BOOL result = [self removeItemAtPath:path error:error];
+                if (result)
+                {
+                    result = [self createDirectoryAtPath:path withIntermediateDirectories:createIntermediates attributes:attributes error:error];
+                }
+            }
+            else
+            {
+                result = NO;
+                *error = [[NSError errorWithDomainEx:NSFileManagerExtensionError code:-1 msg:@"path exist, but it is a file and not directory!"]retain];
+            }
+        }
+    }
+    else
+    {
+        result = [self createDirectoryAtPath:path withIntermediateDirectories:createIntermediates attributes:attributes error:error];
+    }
+    
+    if (!result)
+    {
+        LOG_ERROR(@"fail to create path:%@ error = %@", path,*error);
+    }
+    return result;
+}
+
 
 -(NSArray*)deepSearchDirectory:(NSString*)directory
                       hitBlock:(BOOL(^)(NSString* path))hitBlock
@@ -52,6 +92,7 @@
     }
     else
     {
+        //TODO:test
         results = [NSMutableArray array];
         NSString* contentFullPath = nil;
         for(NSString* content in contents)
