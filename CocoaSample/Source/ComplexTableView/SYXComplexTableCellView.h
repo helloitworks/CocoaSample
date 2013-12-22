@@ -20,7 +20,7 @@
 
 @property (retain) IBOutlet NSTextField *lblVersion;
 @property (retain) IBOutlet NSButton *btnReveal;
-@property (retain) IBOutlet NSButton *btnRun;
+@property (retain) IBOutlet NSButton *btnRemove;
 
 
 @end

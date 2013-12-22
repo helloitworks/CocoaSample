@@ -41,14 +41,14 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="bIB-67-xX2">
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="44" horizontalPageScroll="10" verticalLineScroll="44" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="bIB-67-xX2">
                         <rect key="frame" x="20" y="45" width="245" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="hBs-cr-LCv">
                             <rect key="frame" x="1" y="1" width="243" height="268"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="rHi-6M-oeX">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="42" rowSizeStyle="automatic" viewBased="YES" id="rHi-6M-oeX">
                                     <rect key="frame" x="0.0" y="0.0" width="243" height="268"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -101,14 +101,25 @@
                                                             </textFieldCell>
                                                         </textField>
                                                         <button id="gWr-NE-EzE">
-                                                            <rect key="frame" x="206" y="20" width="36" height="17"/>
+                                                            <rect key="frame" x="202" y="22" width="17" height="18"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="revealInFinder" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" id="YWj-Et-57W">
+                                                            <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSRevealFreestandingTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" id="YWj-Et-57W">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="system"/>
                                                             </buttonCell>
                                                             <connections>
                                                                 <action selector="btnRevealClicked:" target="-2" id="JO0-sS-Zik"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button verticalHuggingPriority="750" id="945-XT-shq">
+                                                            <rect key="frame" x="203" y="4" width="15" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                            <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" controlSize="mini" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p5d-aV-mPb">
+                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                <font key="font" metaFont="miniSystem"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <action selector="btnRemoveClicked:" target="-2" id="VzD-Bw-rbk"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -145,6 +156,7 @@
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="revealInFinder" width="17" height="17"/>
+        <image name="NSRemoveTemplate" width="8" height="8"/>
+        <image name="NSRevealFreestandingTemplate" width="14" height="14"/>
     </resources>
 </document>

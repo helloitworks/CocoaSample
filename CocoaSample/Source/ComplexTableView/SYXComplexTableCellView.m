@@ -11,7 +11,7 @@
 @implementation SYXComplexTableCellView
 @synthesize lblVersion = _lblVersion;
 @synthesize btnReveal = _btnReveal;
-@synthesize btnRun = _btnRun;
+@synthesize btnRemove = _btnRemove;
 
 - (void)awakeFromNib
 {

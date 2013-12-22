@@ -98,9 +98,40 @@ float SYXBaseTableViewRowHeight = 42.f;
     [[NSWorkspace sharedWorkspace] selectFile:bundleInfo.path inFileViewerRootedAtPath:nil];
 }
 
-- (IBAction)btnRunClicked:(id)sender
+// Select the same or next row (if possible)
+- (void)_selectRowStartingAtRow:(NSInteger)row
 {
-    
+    if ([self.tableView selectedRow] == -1)
+    {
+        if (row == -1) {
+            row = 0;
+        }
+        
+        while (row < [self.tableView numberOfRows])
+        {
+                [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+                return;
+            row++;
+        }
+        
+        row = [self.tableView numberOfRows] - 1;
+        while (row >= 0)
+        {
+                [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+                return;
+        }
+        row--;
+    }
+}
+
+- (IBAction)btnRemoveClicked:(id)sender
+{
+    NSInteger row = [self.tableView rowForView:sender];
+    if (row != -1) {
+        [self.tableContents removeObjectAtIndex:row];
+        [self.tableView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:row] withAnimation:NSTableViewAnimationEffectFade];
+        [self _selectRowStartingAtRow:row];
+    }
 }
 
 @end

@@ -19,7 +19,7 @@
 @property (retain) IBOutlet NSTableView *tableView;;
 @property (retain) IBOutlet NSTextField *lblMsg;;
 
-- (IBAction)btnRunClicked:(id)sender;
+- (IBAction)btnRemoveClicked:(id)sender;
 - (IBAction)btnRevealClicked:(id)sender;
 
 @end
