@@ -77,7 +77,7 @@ float SYXBaseTableViewRowHeight = 42.f;
         SYXComplexTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
         // Then setup properties on the cellView based on the column
         cellView.textField.stringValue = bundleInfo.displayName== nil ? @"nil": bundleInfo.displayName ;
-        cellView.version.stringValue = bundleInfo.version == nil ? @"nil" : bundleInfo.version;
+        cellView.lblVersion.stringValue = bundleInfo.version == nil ? @"nil" : bundleInfo.version;
         cellView.imageView.image = [[[NSWorkspace sharedWorkspace] iconForFile:bundleInfo.path] retain];
         return cellView;
     }
@@ -90,13 +90,17 @@ float SYXBaseTableViewRowHeight = 42.f;
 
 
 
+#pragma mark - tableView control action
+- (IBAction)btnRevealClicked:(id)sender
+{
+    NSInteger row = [self.tableView rowForView:sender];
+    SYXApplicationBundleInfo *bundleInfo = [self _entityForRow:row];
+    [[NSWorkspace sharedWorkspace] selectFile:bundleInfo.path inFileViewerRootedAtPath:nil];
+}
+
 - (IBAction)btnRunClicked:(id)sender
 {
     
 }
 
-- (IBAction)btnRevealClicked:(id)sender
-{
-    
-}
 @end

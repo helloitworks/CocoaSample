@@ -141,7 +141,7 @@ static NSGradient *gradientWithTargetColor(NSColor *targetColor) {
 
 // interiorBackgroundStyle is normaly "dark" when the selection is drawn (self.selected == YES) and we are in a key window (self.emphasized == YES). However, we always draw a light selection, so we override this method to always return a light color.
 - (NSBackgroundStyle)interiorBackgroundStyle {
-    return NSBackgroundStyleLight;  
+    return NSBackgroundStyleLight;
 }
 
 - (void)setFrame:(NSRect)frameRect {

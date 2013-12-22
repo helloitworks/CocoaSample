@@ -12,6 +12,8 @@
 		225FAF631864327A00D98628 /* SYXComplexTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225FAF621864327A00D98628 /* SYXComplexTableCellView.m */; };
 		225FAF661864372900D98628 /* SYXApplicationBundleInfo+ComplexTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225FAF651864372900D98628 /* SYXApplicationBundleInfo+ComplexTableView.m */; };
 		225FAF6C1864521900D98628 /* HoverTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225FAF6B1864521900D98628 /* HoverTableRowView.m */; };
+		22783729186648F500B5A863 /* revealInFinder.png in Resources */ = {isa = PBXBuildFile; fileRef = 22783727186648F500B5A863 /* revealInFinder.png */; };
+		2278372A186648F500B5A863 /* revealInFinder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22783728186648F500B5A863 /* revealInFinder@2x.png */; };
 		2281C456186020FA009982C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281C455186020FA009982C9 /* Cocoa.framework */; };
 		2281C48F18602424009982C9 /* SYXTextLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C48E18602424009982C9 /* SYXTextLink.m */; };
 		2281C498186042C2009982C9 /* SYXThreePartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281C496186042C2009982C9 /* SYXThreePartButton.m */; };
@@ -53,6 +55,8 @@
 		225FAF651864372900D98628 /* SYXApplicationBundleInfo+ComplexTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SYXApplicationBundleInfo+ComplexTableView.m"; sourceTree = "<group>"; };
 		225FAF6A1864521900D98628 /* HoverTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoverTableRowView.h; sourceTree = "<group>"; };
 		225FAF6B1864521900D98628 /* HoverTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoverTableRowView.m; sourceTree = "<group>"; };
+		22783727186648F500B5A863 /* revealInFinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revealInFinder.png; sourceTree = "<group>"; };
+		22783728186648F500B5A863 /* revealInFinder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "revealInFinder@2x.png"; sourceTree = "<group>"; };
 		2281C452186020FA009982C9 /* CocoaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2281C455186020FA009982C9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2281C458186020FA009982C9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -122,6 +126,7 @@
 		225FAF5B1864127800D98628 /* ComplexTableView */ = {
 			isa = PBXGroup;
 			children = (
+				22783726186648F500B5A863 /* Resource */,
 				225FAF611864327A00D98628 /* SYXComplexTableCellView.h */,
 				225FAF621864327A00D98628 /* SYXComplexTableCellView.m */,
 				225FAF5C1864129400D98628 /* SYXComplexTableViewWndCtrl.h */,
@@ -131,6 +136,15 @@
 				225FAF651864372900D98628 /* SYXApplicationBundleInfo+ComplexTableView.m */,
 			);
 			path = ComplexTableView;
+			sourceTree = "<group>";
+		};
+		22783726186648F500B5A863 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				22783727186648F500B5A863 /* revealInFinder.png */,
+				22783728186648F500B5A863 /* revealInFinder@2x.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		2281C449186020FA009982C9 = {
@@ -397,9 +411,11 @@
 				2281C4D61860670D009982C9 /* DownloadMgrOpenHLL.png in Resources */,
 				2281C4D51860670D009982C9 /* DownloadMgrOpenHLF.png in Resources */,
 				225FAF60186412B500D98628 /* SYXComplexTableViewWnd.xib in Resources */,
+				22783729186648F500B5A863 /* revealInFinder.png in Resources */,
 				2281C4DA1860670D009982C9 /* DownloadMgrOpenPressL.png in Resources */,
 				2281C4D71860670D009982C9 /* DownloadMgrOpenHLR.png in Resources */,
 				2281C4D91860670D009982C9 /* DownloadMgrOpenPressF.png in Resources */,
+				2278372A186648F500B5A863 /* revealInFinder@2x.png in Resources */,
 				2281C4DB1860670D009982C9 /* DownloadMgrOpenPressR.png in Resources */,
 				2281C4DC1860670D009982C9 /* DownloadMgrOpenR.png in Resources */,
 				22C39DC518628F6F00EB8D7D /* SYXBaseTableViewWnd.xib in Resources */,
