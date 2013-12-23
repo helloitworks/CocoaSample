@@ -9,5 +9,7 @@
 #import "SYXSystemManager.h"
 
 @interface SYXApplicationBundleInfo (ComplexTableView)
+
+@property(nonatomic) BOOL isExtensed;
 @property(nonatomic, readonly) NSString *fileSizeDesc;
 @end

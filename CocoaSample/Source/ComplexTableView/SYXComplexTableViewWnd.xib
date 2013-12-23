@@ -124,6 +124,7 @@
                                                         </button>
                                                     </subviews>
                                                     <connections>
+                                                        <outlet property="btnRemove" destination="945-XT-shq" id="H1w-it-XYm"/>
                                                         <outlet property="btnReveal" destination="gWr-NE-EzE" id="hyg-sl-jPu"/>
                                                         <outlet property="imageView" destination="fHp-wG-gve" id="x5N-Ng-ZKO"/>
                                                         <outlet property="lblVersion" destination="iSe-4z-94m" id="eTV-gN-e94"/>

@@ -7,6 +7,7 @@
 //
 
 #import "SYXComplexTableCellView.h"
+#import "SYXApplicationBundleInfo+ComplexTableView.h"
 
 @implementation SYXComplexTableCellView
 @synthesize lblVersion = _lblVersion;
@@ -67,14 +68,29 @@
     self.mouseInside = NO;
 }
 
+
 - (void)drawRect:(NSRect)dirtyRect
 {
-    if (self.mouseInside) {
-        //[_btnVod setHidden:![(SniffedTaskItem *)self.objectValue canVod]];
+    if (self.mouseInside)
+    {
         [self.btnReveal setHidden:NO];
     } else {
         [self.btnReveal setHidden:YES];
     }
+    
+    /* The 'objectValue' is automatically set by the table when using bindings, or the result from the dataSource method -tableView:objectValueForTableColumn:row:. Key Value Observing (KVO) compliant so user interface elements can be bound to the 'objectValue'.
+     */
+
+//for optimization, move the following to tableView:viewForTableColumn:row:
+//    SYXApplicationBundleInfo *bundleInfo = (SYXApplicationBundleInfo *)self.objectValue;
+//    if (bundleInfo.isExtensed)
+//    {
+//        [self.btnRemove setHidden:NO];
+//    }
+//    else
+//    {
+//        [self.btnRemove setHidden:YES];
+//    }
     
 }
 

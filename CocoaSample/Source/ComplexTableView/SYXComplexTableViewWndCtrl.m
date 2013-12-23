@@ -63,6 +63,11 @@ float SYXBaseTableViewRowHeight = 42.f;
     return [self.tableContents count];
 }
 
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
+{
+    SYXApplicationBundleInfo *bundleInfo = [self.tableContents objectAtIndex:rowIndex];
+    return bundleInfo;
+}
 
 #pragma mark - tableview delegate
 
@@ -87,6 +92,14 @@ float SYXBaseTableViewRowHeight = 42.f;
         cellView.textField.stringValue = bundleInfo.displayName== nil ? @"nil": bundleInfo.displayName ;
         cellView.lblVersion.stringValue = bundleInfo.version == nil ? @"nil" : bundleInfo.version;
         cellView.imageView.image = [[[NSWorkspace sharedWorkspace] iconForFile:bundleInfo.path] retain];
+        if (bundleInfo.isExtensed)
+        {
+            [cellView.btnRemove setHidden:NO];
+        }
+        else
+        {
+            [cellView.btnRemove setHidden:YES];
+        }
         return cellView;
     }
     else
@@ -99,8 +112,37 @@ float SYXBaseTableViewRowHeight = 42.f;
 //click or select
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification
 {
+    
     [self willChangeValueForKey:@"selectedObjects"];
     [self didChangeValueForKey:@"selectedObjects"];
+
+    NSIndexSet *selectedRowIndexs = [self.tableView selectedRowIndexes];
+	if(selectedRowIndexs == nil || selectedRowIndexs.count == 0 )
+    {
+		return;
+	}
+    else if(selectedRowIndexs.count == 1)
+    {
+        NSInteger row = selectedRowIndexs.firstIndex;
+        self.lblMsg.stringValue = [NSString stringWithFormat:@"you click row %ld",row];
+        
+        NSMutableIndexSet* rowIndexesNeedReload = [[[NSMutableIndexSet alloc] init] autorelease];
+        [self.tableContents enumerateObjectsUsingBlock:^(SYXApplicationBundleInfo *bundleInfo, NSUInteger idx, BOOL *stop)
+         {
+             if (bundleInfo.isExtensed == YES)
+             {
+                 bundleInfo.isExtensed = NO;
+                 [rowIndexesNeedReload addIndex:idx];
+             }
+         }];
+        ((SYXApplicationBundleInfo *)[self.tableContents objectAtIndex:row]).isExtensed = YES;
+        [rowIndexesNeedReload addIndex:row];
+        [self.tableView reloadDataForRowIndexes: rowIndexesNeedReload columnIndexes: [NSIndexSet indexSetWithIndexesInRange: NSMakeRange(0, [self.tableView numberOfColumns])]];
+    }
+    else
+    {
+        self.lblMsg.stringValue = [NSString stringWithFormat:@"you select multiple row"];
+    }
 }
 
 #pragma mark - tableView control action
@@ -117,22 +159,23 @@ float SYXBaseTableViewRowHeight = 42.f;
 {
     if ([self.tableView selectedRow] == -1)
     {
-        if (row == -1) {
+        if (row == -1)
+        {
             row = 0;
         }
         
         while (row < [self.tableView numberOfRows])
         {
-                [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
-                return;
+            [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+            return;
             row++;
         }
         
         row = [self.tableView numberOfRows] - 1;
         while (row >= 0)
         {
-                [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
-                return;
+            [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+            return;
         }
         row--;
     }

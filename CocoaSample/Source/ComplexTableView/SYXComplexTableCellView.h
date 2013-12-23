@@ -12,7 +12,7 @@
 {
     NSTextField *_lblVersion;
     NSButton *_btnReveal;
-    NSButton *_btnRun;
+    NSButton *_btnRemove;
     
     BOOL _mouseInside;
     NSTrackingArea *_trackingArea;
