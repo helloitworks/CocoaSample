@@ -160,6 +160,11 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="menuRevealClicked:" target="-2" id="Ecd-cI-eCs"/>
+                        <binding destination="-2" name="hidden" keyPath="self.showRevealInFinderMenuItem" id="Y2c-hz-CLf">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
                     </connections>
                 </menuItem>
                 <menuItem title="remove" id="hMz-Ki-bSm">
@@ -170,6 +175,7 @@
                 </menuItem>
             </items>
         </menu>
+        <userDefaultsController representsSharedInstance="YES" id="WCL-b8-oC8"/>
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>

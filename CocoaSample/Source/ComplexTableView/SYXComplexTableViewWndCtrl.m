@@ -21,6 +21,14 @@ float SYXBaseTableViewRowHeight = 42.f;
 @synthesize tableContents = _tableContents;
 @synthesize tableView = _tableView;
 @synthesize lblMsg = _lblMsg;
+@synthesize selectedObjects = _selectedObjects;
++ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
+    NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
+    if ([key isNotEqualTo:@"selectedObjects"]) {
+        keyPaths = [keyPaths setByAddingObject:@"selectedObjects"];
+    }
+    return keyPaths;
+}
 
 - (id)init{
     self = [super initWithWindowNibName:@"SYXComplexTableViewWnd"];
@@ -88,35 +96,19 @@ float SYXBaseTableViewRowHeight = 42.f;
     return nil;
 }
 
-
-
-#pragma mark - tableView control action
-
-- (NSIndexSet *)_indexesToProcessForContextMenu {
-    NSIndexSet *selectedIndexes = [self.tableView selectedRowIndexes];
-    // If the clicked row was in the selectedIndexes, then we process all selectedIndexes. Otherwise, we process just the clickedRow
-    if (self.tableView.clickedRow != -1 && ![selectedIndexes containsIndex:self.tableView.clickedRow]) {
-        selectedIndexes = [NSIndexSet indexSetWithIndex:self.tableView.clickedRow];
-    }
-    return selectedIndexes;
+//click or select
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification
+{
+    [self willChangeValueForKey:@"selectedObjects"];
+    [self didChangeValueForKey:@"selectedObjects"];
 }
 
-
+#pragma mark - tableView control action
 - (IBAction)btnRevealClicked:(id)sender
 {
     NSInteger row = [self.tableView rowForView:sender];
     SYXApplicationBundleInfo *bundleInfo = [self _entityForRow:row];
     [[NSWorkspace sharedWorkspace] selectFile:bundleInfo.path inFileViewerRootedAtPath:nil];
-}
-
-
-- (IBAction)menuRevealClicked:(id)sender
-{
-    NSIndexSet *selectedIndexes = [self _indexesToProcessForContextMenu];
-    [selectedIndexes enumerateIndexesUsingBlock:^(NSUInteger row, BOOL *stop) {
-        SYXApplicationBundleInfo *bundleInfo = [self _entityForRow:row];
-        [[NSWorkspace sharedWorkspace] selectFile:bundleInfo.path inFileViewerRootedAtPath:nil];
-    }];
 }
 
 
@@ -156,11 +148,49 @@ float SYXBaseTableViewRowHeight = 42.f;
     }
 }
 
+#pragma mark - right click menu
+
+- (NSIndexSet *)_indexesToProcessForContextMenu {
+    NSIndexSet *selectedIndexes = [self.tableView selectedRowIndexes];
+    // If the clicked row was in the selectedIndexes, then we process all selectedIndexes. Otherwise, we process just the clickedRow
+    if (self.tableView.clickedRow != -1 && ![selectedIndexes containsIndex:self.tableView.clickedRow]) {
+        selectedIndexes = [NSIndexSet indexSetWithIndex:self.tableView.clickedRow];
+    }
+    return selectedIndexes;
+}
+
+
+- (IBAction)menuRevealClicked:(id)sender
+{
+    NSIndexSet *selectedIndexes = [self _indexesToProcessForContextMenu];
+    [selectedIndexes enumerateIndexesUsingBlock:^(NSUInteger row, BOOL *stop) {
+        SYXApplicationBundleInfo *bundleInfo = [self _entityForRow:row];
+        [[NSWorkspace sharedWorkspace] selectFile:bundleInfo.path inFileViewerRootedAtPath:nil];
+    }];
+}
+
+
 - (IBAction)menuRemoveRowClicked:(id)sender {
     NSIndexSet *indexes = [self _indexesToProcessForContextMenu];
     [self.tableView beginUpdates];
     [self.tableContents removeObjectsAtIndexes:indexes];
     [self.tableView removeRowsAtIndexes:indexes withAnimation:NSTableViewAnimationEffectFade];
     [self.tableView endUpdates];
+}
+
+- (BOOL)showRevealInFinderMenuItem
+{
+    NSIndexSet *indexes = [self _indexesToProcessForContextMenu];
+    if (indexes.count == 1) {
+        return YES;
+    }
+    else if (indexes.count > 1)
+    {
+        return NO;
+    }
+    else
+    {
+        return NO;
+    }
 }
 @end
