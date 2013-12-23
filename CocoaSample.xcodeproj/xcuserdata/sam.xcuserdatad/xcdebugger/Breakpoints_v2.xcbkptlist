@@ -330,12 +330,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409473798.837107"
+            timestampString = "409221009.036848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "-loadApp"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-windowDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -346,12 +346,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409473798.837107"
+            timestampString = "409221009.036848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-loadApp"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-windowDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -362,12 +362,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409473798.837107"
+            timestampString = "409221009.036848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-tableView:viewForTableColumn:row:"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-tableView:objectValueForTableColumn:row:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -426,12 +426,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409474477.204867"
+            timestampString = "409458040.596625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "-btnRevealClicked:"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "-_selectRowStartingAtRow:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
+            timestampString = "409458048.175559"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "-_selectRowStartingAtRow:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -442,44 +458,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409474477.204867"
+            timestampString = "409458063.190042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "-btnRevealClicked:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409474477.204867"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
-            landmarkName = "-showRevealInFinderMenuItem"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CocoaSample/Source/ComplexTableView/SYXComplexTableViewWndCtrl.m"
-            timestampString = "409473798.837107"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "-tableView:heightOfRow:"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "-btnRemoveClicked:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
