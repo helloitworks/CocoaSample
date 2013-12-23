@@ -11,6 +11,8 @@
 @interface SYXComplexTableCellView : NSTableCellView
 {
     NSTextField *_lblVersion;
+    NSTextField *_lblPath;
+
     NSButton *_btnReveal;
     NSButton *_btnRemove;
     
@@ -19,8 +21,9 @@
 }
 
 @property (retain) IBOutlet NSTextField *lblVersion;
+@property (retain) IBOutlet NSTextField *lblPath;
+
 @property (retain) IBOutlet NSButton *btnReveal;
 @property (retain) IBOutlet NSButton *btnRemove;
-
 
 @end

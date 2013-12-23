@@ -11,6 +11,8 @@
 
 @implementation SYXComplexTableCellView
 @synthesize lblVersion = _lblVersion;
+@synthesize lblPath = _lblPath;
+
 @synthesize btnReveal = _btnReveal;
 @synthesize btnRemove = _btnRemove;
 

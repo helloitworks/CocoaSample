@@ -11,7 +11,8 @@
 #import "SYXApplicationBundleInfo+ComplexTableView.h"
 
 NSString *const SYXBaseTableViewColumnMain = @"Main";
-float SYXBaseTableViewRowHeight = 42.f;
+float SYXDefaultTableViewRowHeight = 42.f;
+float SYXExtensedTableViewRowHeight = 60.f;
 
 @interface SYXComplexTableViewWndCtrl ()
 
@@ -65,7 +66,7 @@ float SYXBaseTableViewRowHeight = 42.f;
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
-    SYXApplicationBundleInfo *bundleInfo = [self.tableContents objectAtIndex:rowIndex];
+    SYXApplicationBundleInfo *bundleInfo = [self _entityForRow:rowIndex];
     return bundleInfo;
 }
 
@@ -73,7 +74,13 @@ float SYXBaseTableViewRowHeight = 42.f;
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
 {
-	return SYXBaseTableViewRowHeight;
+    SYXApplicationBundleInfo *bundleInfo = [self _entityForRow:row];
+    if (bundleInfo.isExtensed)
+    {
+        return SYXExtensedTableViewRowHeight;
+    }
+    //return tableView.rowHeight;
+    return SYXDefaultTableViewRowHeight;
 }
 
 // This method is optional if you use bindings to provide the data
@@ -89,9 +96,11 @@ float SYXBaseTableViewRowHeight = 42.f;
         // We pass us as the owner so we can setup target/actions into this main controller object
         SYXComplexTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
         // Then setup properties on the cellView based on the column
+        cellView.imageView.image = [[[NSWorkspace sharedWorkspace] iconForFile:bundleInfo.path] retain];
+
         cellView.textField.stringValue = bundleInfo.displayName== nil ? @"nil": bundleInfo.displayName ;
         cellView.lblVersion.stringValue = bundleInfo.version == nil ? @"nil" : bundleInfo.version;
-        cellView.imageView.image = [[[NSWorkspace sharedWorkspace] iconForFile:bundleInfo.path] retain];
+        cellView.lblPath.stringValue = bundleInfo.path == nil ? @"nil" : bundleInfo.path;
         if (bundleInfo.isExtensed)
         {
             [cellView.btnRemove setHidden:NO];
@@ -138,10 +147,23 @@ float SYXBaseTableViewRowHeight = 42.f;
         ((SYXApplicationBundleInfo *)[self.tableContents objectAtIndex:row]).isExtensed = YES;
         [rowIndexesNeedReload addIndex:row];
         [self.tableView reloadDataForRowIndexes: rowIndexesNeedReload columnIndexes: [NSIndexSet indexSetWithIndexesInRange: NSMakeRange(0, [self.tableView numberOfColumns])]];
+        [self.tableView noteHeightOfRowsWithIndexesChanged:rowIndexesNeedReload];
     }
     else
     {
         self.lblMsg.stringValue = [NSString stringWithFormat:@"you select multiple row"];
+        NSMutableIndexSet* rowIndexesNeedReload = [[[NSMutableIndexSet alloc] init] autorelease];
+        [self.tableContents enumerateObjectsUsingBlock:^(SYXApplicationBundleInfo *bundleInfo, NSUInteger idx, BOOL *stop)
+         {
+             if (bundleInfo.isExtensed == YES)
+             {
+                 bundleInfo.isExtensed = NO;
+                 [rowIndexesNeedReload addIndex:idx];
+             }
+         }];
+        [self.tableView reloadDataForRowIndexes: rowIndexesNeedReload columnIndexes: [NSIndexSet indexSetWithIndexesInRange: NSMakeRange(0, [self.tableView numberOfColumns])]];
+        [self.tableView noteHeightOfRowsWithIndexesChanged:rowIndexesNeedReload];
+        
     }
 }
 
