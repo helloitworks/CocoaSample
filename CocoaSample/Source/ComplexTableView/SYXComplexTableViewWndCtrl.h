@@ -19,7 +19,10 @@
 @property (retain) IBOutlet NSTableView *tableView;;
 @property (retain) IBOutlet NSTextField *lblMsg;;
 
-- (IBAction)btnRemoveClicked:(id)sender;
 - (IBAction)btnRevealClicked:(id)sender;
+- (IBAction)menuRevealClicked:(id)sender;
+- (IBAction)btnRemoveClicked:(id)sender;
+- (IBAction)menuRemoveRowClicked:(id)sender;
+
 
 @end

@@ -48,7 +48,7 @@
                             <rect key="frame" x="1" y="1" width="243" height="268"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="42" rowSizeStyle="automatic" viewBased="YES" id="rHi-6M-oeX">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" rowHeight="42" rowSizeStyle="automatic" viewBased="YES" id="rHi-6M-oeX">
                                     <rect key="frame" x="0.0" y="0.0" width="243" height="268"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -119,7 +119,7 @@
                                                                 <font key="font" metaFont="miniSystem"/>
                                                             </buttonCell>
                                                             <connections>
-                                                                <action selector="btnRemoveClicked:" target="-2" id="VzD-Bw-rbk"/>
+                                                                <action selector="menuRemoveRowClicked:" target="-2" id="0Ux-rV-jdV"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -136,6 +136,7 @@
                                     <connections>
                                         <outlet property="dataSource" destination="-2" id="AqB-Qv-JPx"/>
                                         <outlet property="delegate" destination="-2" id="FSn-cG-vcV"/>
+                                        <outlet property="menu" destination="u0C-Zp-iHW" id="C8q-P2-nn2"/>
                                     </connections>
                                 </tableView>
                             </subviews>
@@ -153,6 +154,22 @@
                 </subviews>
             </view>
         </window>
+        <menu id="u0C-Zp-iHW">
+            <items>
+                <menuItem title="reveal" id="G8P-i4-OxO">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="menuRevealClicked:" target="-2" id="Ecd-cI-eCs"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="remove" id="hMz-Ki-bSm">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="menuRemoveRowClicked:" target="-2" id="11n-fj-bo0"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
