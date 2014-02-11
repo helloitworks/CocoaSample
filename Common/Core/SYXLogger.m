@@ -6,6 +6,7 @@
 //
 
 #import "SYXLogger.h"
+#import "NSDate+Extension.h"
 
 NSStringEncoding SYXLoggerDefaultEncoding = NSUTF8StringEncoding;
 
@@ -46,7 +47,7 @@ static SYXLogger *sharedInstance = nil;
 
 #ifdef DEBUG
 #else
-    NSString *date = [StringUtils getCurrentDate];
+    NSString *date = [NSDate currentDateString];
     filePathName = [filePathName stringByReplacingOccurrencesOfString:@".log" withString:[NSString stringWithFormat:@"_%@.log",date]];
 #endif
     logFile = fopen([filePathName UTF8String],"a+");

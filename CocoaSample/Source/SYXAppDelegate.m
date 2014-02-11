@@ -24,6 +24,7 @@ NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
     // Insert code here to initialize your application
     [[SYXLogger sharedInstance] setFilePathName:@"/tmp/CocoaSample.log"];
     LOG_DEBUG(@"it is a test");
+    [self fileNotifications];
 }
 - (void)awakeFromNib
 {
@@ -48,6 +49,33 @@ NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
     self.threePartButton.thirdImageHover = [NSImage imageNamed:@"DownloadMgrOpenHLR"];
     
 }
+
+//--------sleep notification
+- (void) receiveSleepNote: (NSNotification*) note
+{
+    LOG_DEBUG(@"receiveSleepNote: %@", [note name]);
+}
+
+- (void) receiveWakeNote: (NSNotification*) note
+{
+    LOG_DEBUG(@"receiveWakeNote: %@", [note name]);
+}
+
+- (void) fileNotifications
+{
+    //These notifications are filed on NSWorkspace's notification center, not the default
+    // notification center. You will not receive sleep/wake notifications if you file
+    //with the default notification center.
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self
+                                                           selector: @selector(receiveSleepNote:)
+                                                               name: NSWorkspaceWillSleepNotification object: NULL];
+    
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self
+                                                           selector: @selector(receiveWakeNote:)
+                                                               name: NSWorkspaceDidWakeNotification object: NULL];
+}
+
+
 
 - (IBAction)onTextLink:(id)sender
 {
