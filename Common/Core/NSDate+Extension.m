@@ -8,7 +8,7 @@
 
 #import "NSDate+Extension.h"
 
-NSString *const NSDateExtensionDefaultDateTimeFormat = @"MM月dd日  HH:mm";
+NSString *const NSDateExtensionDefaultDateTimeFormat = @"yyyy-MM-dd  HH:mm:ss";
 NSString *const NSDateExtensionDefaultDateFormat = @"yyyy-MM-dd";
 
 

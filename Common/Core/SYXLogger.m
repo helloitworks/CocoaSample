@@ -56,12 +56,6 @@ static SYXLogger *sharedInstance = nil;
 
 - (void)log:(int)logLevel func:(const char*)function line:(int)lineNo format:(NSString *)messageFormat,...
 {
-    if([NSUserName() isEqualToString:@"wangachilles"])
-    {
-        // 这个控制台污染压力山大啊，菜鸟表示看得很辛苦，屏蔽掉先.........
-        return;
-    }
-    
 	va_list args;
 	va_start(args,messageFormat);
 	
