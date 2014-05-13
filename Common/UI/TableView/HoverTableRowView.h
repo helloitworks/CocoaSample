@@ -47,6 +47,10 @@
 
 #import <Foundation/Foundation.h>
 
+/*
+ This class is used because the NIB has an HoverTableRowView placed in it with a special key of NSTableViewRowViewKey. NSTableView first looks for a view with that key for the row view, if the delegate method tableView:rowViewForRow: is not used.
+ */
+
 @interface HoverTableRowView : NSTableRowView {
 @private
     BOOL mouseInside;

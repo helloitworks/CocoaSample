@@ -167,6 +167,16 @@ float SYXExtensedTableViewRowHeight = 60.f;
     }
 }
 
+
+//如果有这个delegate函数，那么自定义的TableRowView失效，
+//- (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row
+//{
+//    NSTableRowView *view = [[NSTableRowView alloc] initWithFrame:NSMakeRect(1, 1, 100, 50)];
+//
+//    [view setBackgroundColor:[NSColor redColor]];
+//    return view;;
+//}
+
 #pragma mark - tableView control action
 - (IBAction)btnRevealClicked:(id)sender
 {

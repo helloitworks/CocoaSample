@@ -399,7 +399,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "184"
             endingLineNumber = "184"
-            landmarkName = "-_selectRowStartingAtRow:"
+            landmarkName = "-btnRevealClicked:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -415,7 +415,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "182"
             endingLineNumber = "182"
-            landmarkName = "-_selectRowStartingAtRow:"
+            landmarkName = "-btnRevealClicked:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -431,7 +431,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "208"
             endingLineNumber = "208"
-            landmarkName = "-btnRemoveClicked:"
+            landmarkName = "-_selectRowStartingAtRow:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

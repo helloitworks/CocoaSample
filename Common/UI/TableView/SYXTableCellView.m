@@ -10,20 +10,15 @@
 
 @implementation SYXTableCellView
 
-- (id)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code here.
+//changing the selected text field cell’s text color 
+-(void)setBackgroundStyle:(NSBackgroundStyle)style {
+    if (style == NSBackgroundStyleLight) {
+        [self.textField.cell setTextColor:[NSColor controlTextColor]];
+        
+    } else {
+        [self.textField.cell setTextColor:[NSColor redColor]];
+        
     }
-    return self;
+    [super setBackgroundStyle:style];
 }
-
-- (void)drawRect:(NSRect)dirtyRect
-{
-	[super drawRect:dirtyRect];
-	
-    // Drawing code here.
-}
-
 @end

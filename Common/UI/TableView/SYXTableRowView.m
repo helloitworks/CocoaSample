@@ -8,6 +8,8 @@
 
 #import "SYXTableRowView.h"
 
+
+
 @implementation SYXTableRowView
 
 #pragma mark - background
@@ -44,10 +46,20 @@
 
 
 
+// SYXTableCellView的background style一直返回NSBackgroundStyleLight，直到有鼠标点击某一行。
+// 如果都是hover或者调用selectRowIndexes，而没有鼠标点击，这里通过判断self.selected返回相应的background style，从而SYXTableCellView可以得到不同的background style来绘制不同的文字颜色
+//- (NSBackgroundStyle)interiorBackgroundStyle
+//{
+//    if (self.selected)
+//    {
+//        return NSBackgroundStyleDark;
+//    }
+//    else
+//    {
+//        return NSBackgroundStyleLight;
+//    }
+//}
 
-- (NSBackgroundStyle)interiorBackgroundStyle {
-    return NSBackgroundStyleLight;
-}
 
 
 @end
