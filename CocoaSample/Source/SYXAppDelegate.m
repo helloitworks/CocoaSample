@@ -48,6 +48,10 @@ NSString *const SYXTextLinkUrl = @"http://www.helloitworks.com";
     self.threePartButton.secondeImageHover = [NSImage imageNamed:@"DownloadMgrOpenHLF"];
     self.threePartButton.thirdImageHover = [NSImage imageNamed:@"DownloadMgrOpenHLR"];
     
+    
+
+     
+    
 }
 
 //--------sleep notification
