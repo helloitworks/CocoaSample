@@ -137,7 +137,7 @@
                                                         <outlet property="textField" destination="Dq5-zR-0sO" id="D7f-AW-Ky0"/>
                                                     </connections>
                                                 </tableCellView>
-                                                <customView identifier="NSTableViewRowViewKey" id="O22-6F-Nwd" customClass="SYXTableRowView">
+                                                <customView identifier="NSTableViewRowViewKey" id="O22-6F-Nwd" customClass="HoverTableRowView">
                                                     <rect key="frame" x="1" y="63" width="240" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </customView>
