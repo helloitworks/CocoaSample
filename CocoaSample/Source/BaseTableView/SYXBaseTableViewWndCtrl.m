@@ -33,6 +33,12 @@ NSString *const SYXBaseTableViewColumnOperation = @"Operation";
     return self;
 }
 
+- (void)awakeFromNib
+{
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+}
+
 - (void)windowDidLoad
 {
     [super windowDidLoad];

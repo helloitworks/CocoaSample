@@ -16,7 +16,7 @@
 }
 
 @property (retain) NSMutableArray *tableContents;
-@property (retain) IBOutlet NSTableView *tableView;;
+@property (retain) IBOutlet NSTableView *tableView;
 @property (retain) IBOutlet NSTextField *lblMsg;;
 
 - (IBAction)btnRunClicked:(id)sender;
